@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🤖 AI 每日報 — 2026年05月12日</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0f0f0f;
+      color: #e5e5e5;
+      font-family: 'Noto Sans TC', sans-serif;
+      line-height: 1.7;
+      padding: 24px 16px 48px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 48px 0 36px;
+    }
+
+    .header-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: clamp(2.4rem, 8vw, 3.6rem);
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .header-date {
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 1px;
+    }
+
+    .header-divider {
+      margin-top: 32px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #3b82f6 20%, #8b5cf6 50%, #f59e0b 80%, transparent);
+      border: none;
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-top: 44px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: #2a2a2a;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 20px 22px 18px;
+      margin-bottom: 14px;
+      border-left: 4px solid transparent;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .card-summary {
+      font-size: 13.5px;
+      color: #a0a0a0;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .card-source {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #4b5563;
+    }
+
+    .card-link {
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: opacity 0.15s;
+    }
+
+    .card-link:hover { opacity: 0.75; }
+
+    /* ── Theme colours ── */
+    .theme-blue  .card { border-left-color: #3b82f6; }
+    .theme-blue  .section-dot { background: #3b82f6; }
+    .theme-blue  .section-title { color: #3b82f6; }
+    .theme-blue  .card-link { color: #60a5fa; }
+
+    .theme-green .card { border-left-color: #10b981; }
+    .theme-green .section-dot { background: #10b981; }
+    .theme-green .section-title { color: #10b981; }
+    .theme-green .card-link { color: #34d399; }
+
+    .theme-amber .card { border-left-color: #f59e0b; }
+    .theme-amber .section-dot { background: #f59e0b; }
+    .theme-amber .section-title { color: #f59e0b; }
+    .theme-amber .card-link { color: #fbbf24; }
+
+    .theme-purple .card { border-left-color: #8b5cf6; }
+    .theme-purple .section-dot { background: #8b5cf6; }
+    .theme-purple .section-title { color: #8b5cf6; }
+    .theme-purple .card-link { color: #a78bfa; }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #1f1f1f;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: #4b5563;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-accent {
+      color: #6b7280;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-badge">Daily Intelligence Brief</div>
+    <h1>🤖 AI 每日報</h1>
+    <p class="header-date">2026年05月12日（星期二）</p>
+    <hr class="header-divider" />
+  </header>
+
+  <!-- ══════════════════════════════════════
+       Section 1 ── AI 產業動態
+  ══════════════════════════════════════ -->
+  <section class="section theme-blue">
+    <div class="section-header">
+      <div class="section-dot"></div>
+      <span class="section-title">🏢 AI 產業動態</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="card">
+      <p class="card-title">Google 成功阻止駭客利用 AI 發動大規模漏洞攻擊</p>
+      <p class="card-summary">
+        Google 威脅情報小組（Threat Intelligence Group）宣布，成功挫敗一起駭客企圖利用 AI 模型「規劃大規模零日漏洞利用行動」的陰謀。Google 以高度信心確認，攻擊者確實使用了 AI 模型來掃描並試圖利用某公司數位防禦中的未知弱點。Google 表示，此次攻擊者並未使用 Gemini 等 Google 自家模型，但事件揭示 AI 正被用於網路攻擊的新興威脅態勢。此事件再度引發業界對 AI 安全防線的高度重視。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">CNBC</span>
+        <a class="card-link" href="https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <p class="card-title">Anthropic 接近完成 900 億美元估值融資，超越 OpenAI</p>
+      <p class="card-summary">
+        Anthropic 正與投資者洽談新一輪融資，估值有望達到 9,000 億美元（約 900 billion），高於 OpenAI 的估值。根據報導，這輪融資規模約 500 億美元，有望在近兩週內完成。Google 計劃投資最多 400 億美元，目前已承諾現金 100 億美元，並視業績表現追加最多 300 億。Anthropic CEO Dario Amodei 表示，公司在今年第一季的年化收入與使用量成長了 80 倍，造成算力嚴重不足的挑戰。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">CNBC / TechCrunch</span>
+        <a class="card-link" href="https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <p class="card-title">OpenAI 推出 GPT-5.5 Instant，設為 ChatGPT 預設模型</p>
+      <p class="card-summary">
+        OpenAI 宣布將 GPT-5.5 Instant 設定為所有 ChatGPT 用戶的預設模型，取代原本的 GPT-5.3 Instant。新模型在事實準確性方面大幅提升，幻覺（hallucination）錯誤率較前代降低 52.5%。與此同時，OpenAI 也為 ChatGPT Plus 與 Pro 用戶推出記憶功能強化更新，能從歷史對話、儲存記憶、檔案與連結的 Gmail 中提取個人化資訊，讓回應更加連貫實用。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">OpenAI / CNBC</span>
+        <a class="card-link" href="https://openai.com/news/" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <p class="card-title">Microsoft 修訂 OpenAI 合作協議，年化 AI 營收突破 370 億美元</p>
+      <p class="card-summary">
+        Microsoft 宣布與 OpenAI 修訂合作協議，簡化雙方合作架構。根據新協議，Microsoft 持續作為 OpenAI 的主要雲端合作夥伴，OpenAI 產品優先在 Azure 上首發；同時 OpenAI 也可在其他雲端平台提供服務，Microsoft 則持有 OpenAI 模型與產品的授權使用權至 2032 年。本季財報顯示，Microsoft 來自 AI 業務的年化營收已達 370 億美元，年增 123%，資本支出亦達 1,900 億美元。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Microsoft Blog</span>
+        <a class="card-link" href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <p class="card-title">Meta 斥資收購機器人 AI 新創，加速人形機器人布局</p>
+      <p class="card-summary">
+        Meta Platforms 宣布完成收購 Assured Robot Intelligence，這是一家專門開發機器人 AI 模型的新創公司，此舉是 Meta 大規模建構人形機器人技術的重要一步。同期，Meta 旗下商業 AI 每週已促成超過 1,000 萬次對話，並推出全新 Muse Spark 大型語言模型。Meta 今年 AI 資本支出預計達 1,150 億至 1,350 億美元，幾乎是去年的兩倍，顯示其追趕 OpenAI 與 Google 的積極態勢。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Bloomberg / TechCrunch</span>
+        <a class="card-link" href="https://www.bloomberg.com/news/articles/2026-05-01/meta-acquires-assured-robot-intelligence-to-help-build-humanoid-technology" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       Section 2 ── AI 工具介紹
+  ══════════════════════════════════════ -->
+  <section class="section theme-green">
+    <div class="section-header">
+      <div class="section-dot"></div>
+      <span class="section-title">🛠️ AI 工具介紹</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="card">
+      <p class="card-title">Claude Opus 4.7 登頂 LMArena，Anthropic 同步推出 Claude Design</p>
+      <p class="card-summary">
+        Anthropic 正式發布 Claude Opus 4.7，在全球最大 AI 模型競技場 LMArena 上奪得第一名。同時，Anthropic 推出全新產品 Claude Design，讓用戶可與 Claude 協作完成視覺設計工作，包含設計稿、原型、簡報等視覺作品。此外，Anthropic 也發布「Dreaming（夢境）」AI 代理技術研究預覽，使自主 AI 系統能在任務間隙回顧自身行為，識別模式並優化未來表現。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Anthropic / LMArena</span>
+        <a class="card-link" href="https://www.anthropic.com/news" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <p class="card-title">Microsoft Agent 365 正式上線：企業 AI 代理的統一治理平台</p>
+      <p class="card-summary">
+        Microsoft 宣布 Agent 365 正式進入全面供應（GA）階段，這是一套針對企業內所有 AI 代理的安全性與治理控制平台，能幫助組織發現並管理「影子 AI 代理」。同時推出全新 E7「前沿套件」授權（每用戶每月 99 美元），整合 E5、Copilot、Agent 365 與 Entra Suite。Microsoft 365 Copilot 也持續擴充，為 Outlook 帶來類代理自動化功能，協助處理電子郵件與行事曆管理。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Microsoft Security Blog</span>
+        <a class="card-link" href="https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <p class="card-title">OpenAI Codex 更新：直接在 Chrome 瀏覽器內進行 AI 輔助編程</p>
+      <p class="card-summary">
+        OpenAI 大幅升級其 Codex AI 程式碼代理，使其能直接在 Chrome 瀏覽器（macOS 與 Windows）內運作，提升 Codex 與網頁應用和網站互動的能力。這使開發者無需切換工具，即可在瀏覽任何網頁時獲得即時 AI 編程輔助。同期，OpenAI 也為網路安全團隊推出限量預覽的 GPT-5.5-Cyber，這是專門針對資安場景優化的模型版本。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">CNBC / OpenAI</span>
+        <a class="card-link" href="https://www.cnbc.com/2026/05/07/openai-rolls-out-new-gpt-5point5-cyber-to-vetted-cybersecurity-teams.html" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <p class="card-title">Meta Spark 開源模型與 DeepSeek V4：免費可用的強大新選擇</p>
+      <p class="card-summary">
+        Meta 在其超智能實驗室（Meta Superintelligence Labs）旗下發布首款大型語言模型 Muse Spark，主打開源策略，讓開發者可免費取得並部署。與此同時，DeepSeek V4 也正式亮相，業界評價其效能表現相當出色，且完全免費使用。這兩款模型的出現，為企業與個人開發者提供了更多強大的免費 AI 選項，對付費模型生態系構成新的競爭壓力。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">MarketingProfs / LLM Stats</span>
+        <a class="card-link" href="https://www.marketingprofs.com/opinions/2026/54655/ai-update-may-8-2026-ai-news-and-views-from-the-past-week" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       Section 3 ── AI 實際應用
+  ══════════════════════════════════════ -->
+  <section class="section theme-amber">
+    <div class="section-header">
+      <div class="section-dot"></div>
+      <span class="section-title">🌍 AI 實際應用</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="card">
+      <p class="card-title">AI 代理改造人才招募：IT 公司實現 62% 加速到職、41% 利潤提升</p>
+      <p class="card-summary">
+        2026 年上半年，多家企業已將 AI 代理正式導入人才招募流程並取得顯著成果。一家中型 IT 人力仲介公司部署 AI 代理後，職缺到職速度加快 62%，同時實現 41% 的利潤率提升。醫療人力機構則透過 AI 代理將行政工作量降低 70%，讓招募人員能專注在高價值的人際互動。這些案例顯示，AI 代理已從概念驗證進入實際業務部署的關鍵轉折點。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Michael R. Cronin</span>
+        <a class="card-link" href="https://www.michaelrcronin.com/post/real-world-ai-agent-staffing-wins-5-case-studies-from-2026" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <p class="card-title">WHO 與 Palantir 合作：AI 疾病監測平台將全球疫情反應縮短 40%</p>
+      <p class="card-summary">
+        世界衛生組織（WHO）與 Palantir 合作建置的即時疾病監測平台已取得重大成果。該平台整合各國衛生部資料、社群媒體、醫院記錄及旅遊模式，運用 AI 提前數週預測疫情爆發熱點。實際效果顯示，全球對新型病原體的反應時間縮短了超過 40%。這是 AI 在公共衛生領域最具代表性的落地案例之一，展現生成式 AI 在大規模複雜資料整合上的強大潛力。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Digital Defynd / AI Multiple</span>
+        <a class="card-link" href="https://digitaldefynd.com/IQ/artificial-intelligence-case-studies/" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <p class="card-title">UCSF 與 SandboxAQ：AI 加量子化學讓帕金森氏症新藥研發速度提升 36 倍</p>
+      <p class="card-summary">
+        美國加州大學舊金山分校（UCSF）與 SandboxAQ 合作，將量子化學模擬與 AI 結合，大幅加速帕金森氏症候選藥物的篩選速度，實現傳統方法的 36 倍加速。另一個案例中，Phagos 公司利用 AI 設計噬菌體雞尾酒療法，準確率高達 95%，發現速度較人工方法提升 10 倍。這些突破性案例代表 AI 在製藥領域已超越工具層次，成為科學發現的核心引擎。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">WEF / Digital Defynd</span>
+        <a class="card-link" href="https://www.weforum.org/stories/2026/01/the-leading-companies-turning-ai-into-real-world-impact/" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <p class="card-title">Anthropic 攜手華爾街大型銀行：推出金融服務 AI 代理套件</p>
+      <p class="card-summary">
+        Anthropic 宣布深化在金融服務業的布局，為全球頂尖銀行推出十款預建 AI 代理，涵蓋投資說明書製作、KYC 客戶審查、月結自動化等關鍵業務場景。這些代理以外掛程式形式整合至 Claude Cowork 與 Claude Code，或作為 Claude Managed Agents 的範本提供。同時，Anthropic 也完成與 Microsoft 365 的全面整合，並與穆迪（Moody's）建立數據合作夥伴關係，進一步鞏固其在企業 AI 市場的地位。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Fortune</span>
+        <a class="card-link" href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <p class="card-title">Dmall 與物美超市：AI 即時整合 POS、庫存與 IoT 實現零售全自動化</p>
+      <p class="card-summary">
+        零售科技公司 Dmall 攜手物美超市（Wumart），透過統一平台整合銷售點（POS）資料、庫存系統、監控攝影機與 IoT 感測器，實現全端零售作業自動化。AI 系統能即時自動調整定價、監控門市運營並管理能耗，將過去需要人工介入的複雜決策全面自動化。這個案例展示了 AI 如何在高度動態的實體零售環境中，帶來端對端的營運效率革新。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Google Cloud / AI Multiple</span>
+        <a class="card-link" href="https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       Section 4 ── AI 學習教學
+  ══════════════════════════════════════ -->
+  <section class="section theme-purple">
+    <div class="section-header">
+      <div class="section-dot"></div>
+      <span class="section-title">📚 AI 學習教學</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="card">
+      <p class="card-title">DataCamp 完整指南：2026 年從零開始學習 AI 的最佳路徑</p>
+      <p class="card-summary">
+        DataCamp 發布 2026 年最新「從零開始學 AI 完整指南」，涵蓋從 Python 基礎、機器學習概念到大型語言模型應用的完整學習路徑。指南建議初學者從 ChatGPT、Google Gemini 或 Microsoft Copilot 等免費工具開始，重點掌握提示工程（Prompt Engineering）技巧，因為如何精確描述需求已成為現代職場的基礎技能。文章強調「從一個工具、一個使用場景、一個真實任務開始」的漸進學習策略。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">DataCamp</span>
+        <a class="card-link" href="https://www.datacamp.com/blog/how-to-learn-ai" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <p class="card-title">初學者完整 AI 工具入門：從選對工具到實際應用的步驟指南</p>
+      <p class="card-summary">
+        一份針對 2026 年初學者設計的 AI 工具入門指南，從選擇合適工具開始，涵蓋 ChatGPT（文字寫作、問答、腦力激盪）、Canva AI（無需設計技能即可製作專業圖像）等各場景最佳工具。指南特別強調識別「重複性高、耗時、高量」的工作流程，如草稿撰寫、文件摘要、研究整合等，作為 AI 介入的優先切入點，幫助初學者快速感受 AI 帶來的實際效益。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Arthify / Kucinichaction</span>
+        <a class="card-link" href="https://arthify.in/how-to-use-ai-tools-as-a-beginner/" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <p class="card-title">YouTube 熱門教學：AI 新手也能用 AI 建構任何東西</p>
+      <p class="card-summary">
+        一部廣受歡迎的 YouTube AI 入門教學「AI Tutorial for Beginners 2026: How To Use AI &amp; Build ANYTHING」，以實作為主軸，展示即使沒有程式背景的初學者，也能利用現有 AI 工具打造實用應用程式與自動化工作流程。課程涵蓋如何使用 AI 工具進行無程式碼開發、內容創作、自動化腳本等，是 2026 年初學者評價最高的免費學習資源之一。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">YouTube / Amazing eLearning</span>
+        <a class="card-link" href="https://www.youtube.com/watch?v=65CASowfnKs" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <p class="card-title">Udemy 課程：Claude AI 101 —— 2026 年初學者完整操作教學</p>
+      <p class="card-summary">
+        Udemy 上架最新課程「Claude AI 101: The Complete Tutorial for Beginners in 2026」，專為從未使用過 Claude 的初學者設計。課程以實際操作為核心，教導學員如何善用 Claude 進行文件分析、程式碼協作、內容創作與商業應用，並融入 2026 年最新的 Claude Opus 4.7 功能介紹。對於希望在職場中善用 Anthropic AI 工具的從業人員，這是目前評價最高的入門課程之一。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Udemy</span>
+        <a class="card-link" href="https://www.udemy.com/course/claude-ai-101-the-complete-tutorial-for-beginners-in-2026/" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <p class="card-title">Coursera 指南：人工智慧入門學習路徑，從基礎理解到職場應用</p>
+      <p class="card-summary">
+        Coursera 更新其「如何學習人工智慧：初學者指南」，為不同背景的學習者規劃適合的學習路徑。指南建議從理解 AI 基本概念入手，再透過動手實作（實驗工具、嘗試提示、應用於真實任務）建立熟悉感，最後才進入技術深化階段。文章強調，在 AI 快速迭代的 2026 年，保持學習習慣和嘗試新工具的開放心態，比掌握任何單一技術都更為重要。
+      </p>
+      <div class="card-footer">
+        <span class="card-source">Coursera</span>
+        <a class="card-link" href="https://www.coursera.org/articles/how-to-learn-artificial-intelligence" target="_blank" rel="noopener">閱讀原文 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p class="footer-text">
+      <span class="footer-accent">每日由 Claude AI Agent 自動整理</span><br />
+      生成時間：2026年05月12日 &nbsp;｜&nbsp; Powered by Anthropic Claude Sonnet 4.6
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
