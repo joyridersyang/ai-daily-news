@@ -97,6 +97,7 @@
       flex-shrink: 0;
     }
 
+    /* per-section accent colours */
     .sec-industry .section-title { color: #2563eb; }
     .sec-industry .section-title::before { background: #2563eb; }
     .sec-industry .card { border-left: 3px solid #2563eb; }
@@ -163,53 +164,6 @@
     }
     .card-source a:hover { text-decoration: underline; }
 
-    /* ── Archive Section ── */
-    .archive-wrapper {
-      max-width: 740px;
-      margin: 0 auto;
-      padding: 0 20px 48px;
-    }
-    .archive-section {
-      background: #ebebeb;
-      border-radius: 12px;
-      padding: 28px 28px 24px;
-    }
-    .archive-section h2 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #2d3561;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .archive-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
-    }
-    .archive-card {
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-      padding: 14px 16px;
-      text-decoration: none;
-      color: #1a1a2e;
-      font-size: 14px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: box-shadow 0.2s, background 0.2s;
-    }
-    .archive-card:hover {
-      box-shadow: 0 4px 14px rgba(0,0,0,0.10);
-      background: #f0f3ff;
-      color: #2563eb;
-    }
-    .archive-card .arrow { color: #aaa; font-size: 16px; }
-    .archive-card:hover .arrow { color: #2563eb; }
-
     /* ── Footer ── */
     .site-footer {
       background: #ebebeb;
@@ -237,7 +191,6 @@
   <a class="nav-btn" href="#tools">🛠️ 工具</a>
   <a class="nav-btn" href="#apply">🌍 應用</a>
   <a class="nav-btn" href="#learn">📚 教學</a>
-  <a class="nav-btn" href="#archive">📂 存檔</a>
 </nav>
 
 <!-- Main -->
@@ -247,6 +200,7 @@
   <section class="section sec-industry" id="industry">
     <h2 class="section-title">🏢 AI 產業動態</h2>
 
+    <!-- Card 1 -->
     <article class="card">
       <h3 class="card-title">Google 搶在 Apple AI 反攻前，全面將 Gemini 整合進 Android 系統</h3>
       <p class="card-summary">
@@ -258,6 +212,7 @@
       </div>
     </article>
 
+    <!-- Card 2 -->
     <article class="card">
       <h3 class="card-title">OpenAI 宣稱將對 Apple 採取法律行動，並坦言算力供給嚴重不足</h3>
       <p class="card-summary">
@@ -269,6 +224,7 @@
       </div>
     </article>
 
+    <!-- Card 3 -->
     <article class="card">
       <h3 class="card-title">Microsoft 全新 AI 多模型安全系統登上業界基準榜首，發現 16 項 Windows 嚴重漏洞</h3>
       <p class="card-summary">
@@ -280,6 +236,7 @@
       </div>
     </article>
 
+    <!-- Card 4 -->
     <article class="card">
       <h3 class="card-title">Meta Q1 2026 營收年增 33% 達 563 億美元，同日宣布推出隱身 AI 聊天功能</h3>
       <p class="card-summary">
@@ -291,6 +248,7 @@
       </div>
     </article>
 
+    <!-- Card 5 -->
     <article class="card">
       <h3 class="card-title">Anthropic 發布 Claude Opus 4.7、攜手蓋茲基金會注資 2 億美元推動全球健康 AI</h3>
       <p class="card-summary">
@@ -308,6 +266,7 @@
   <section class="section sec-tools" id="tools">
     <h2 class="section-title">🛠️ AI 工具介紹</h2>
 
+    <!-- Card 1 -->
     <article class="card">
       <h3 class="card-title">Anthropic 發布 20+ 個 MCP 連接器與 Claude Cowork，深攻法律產業</h3>
       <p class="card-summary">
@@ -319,6 +278,7 @@
       </div>
     </article>
 
+    <!-- Card 2 -->
     <article class="card">
       <h3 class="card-title">HubSpot 推出 AEO Sensor：追蹤 AI 答案引擎的行銷分析儀表板</h3>
       <p class="card-summary">
@@ -330,6 +290,7 @@
       </div>
     </article>
 
+    <!-- Card 3 -->
     <article class="card">
       <h3 class="card-title">Microsoft Agent 365 正式上線：企業影子 AI 代理的發現與治理平台</h3>
       <p class="card-summary">
@@ -341,6 +302,7 @@
       </div>
     </article>
 
+    <!-- Card 4 -->
     <article class="card">
       <h3 class="card-title">2026 年最值得關注的 AI 生產力工具：Gamma、Motion、Perplexity 各領風騷</h3>
       <p class="card-summary">
@@ -358,6 +320,7 @@
   <section class="section sec-apply" id="apply">
     <h2 class="section-title">🌍 AI 實際應用</h2>
 
+    <!-- Card 1 -->
     <article class="card">
       <h3 class="card-title">Goldman Sachs 報告：AI 每天為員工節省最多 1 小時，但 80% 企業仍看不見底線效益</h3>
       <p class="card-summary">
@@ -369,6 +332,7 @@
       </div>
     </article>
 
+    <!-- Card 2 -->
     <article class="card">
       <h3 class="card-title">Google 成功挫敗駭客利用 AI 策劃大規模零日漏洞攻擊計畫</h3>
       <p class="card-summary">
@@ -380,6 +344,7 @@
       </div>
     </article>
 
+    <!-- Card 3 -->
     <article class="card">
       <h3 class="card-title">中型 IT 人才仲介公司部署 AI 多代理系統，推出「AI 強化招募」高價服務</h3>
       <p class="card-summary">
@@ -391,10 +356,11 @@
       </div>
     </article>
 
+    <!-- Card 4 -->
     <article class="card">
       <h3 class="card-title">PwC 擴大與 Anthropic 戰略聯盟：用 Claude 重塑各行業企業核心功能</h3>
       <p class="card-summary">
-        PwC 宣布擴大與 Anthropic 的戰略聯盟，在四大諮詢面向深化 Claude 的應用：協助建構客戶技術產品、執行企業併購交易分析、重塑企業核心職能，以及為各產業客戶提供 AI 轉型諮詢。PwC 是首批深度整合 Claude 的全球頂尖會計師事務所，此合作被視為 B2B 專業服務業 AI 轉型的重要里程碑，預示著諮詢業的商業模式正在被 AI 重新定義。
+        PwC 宣布擴大與 Anthropic 的戰略聯盟，在四大人諮詢面向深化 Claude 的應用：協助建構客戶技術產品、執行企業併購交易分析、重塑企業核心職能，以及為各產業客戶提供 AI 轉型諮詢。PwC 是首批深度整合 Claude 的全球頂尖會計師事務所，此合作被視為 B2B 專業服務業 AI 轉型的重要里程碑，預示著諮詢業的商業模式正在被 AI 重新定義。
       </p>
       <div class="card-source">
         <span class="media-name">Anthropic Blog</span>
@@ -408,6 +374,7 @@
   <section class="section sec-learn" id="learn">
     <h2 class="section-title">📚 AI 學習教學</h2>
 
+    <!-- Card 1 -->
     <article class="card">
       <h3 class="card-title">2026 年從零開始學 AI：DataCamp 完整學習路線圖（含工具與時程）</h3>
       <p class="card-summary">
@@ -419,6 +386,7 @@
       </div>
     </article>
 
+    <!-- Card 2 -->
     <article class="card">
       <h3 class="card-title">AI 工具新手完全指南：選定一個工具、一個任務，從真實工作開始練習</h3>
       <p class="card-summary">
@@ -430,6 +398,7 @@
       </div>
     </article>
 
+    <!-- Card 3 -->
     <article class="card">
       <h3 class="card-title">初學者如何搭建 AI Agent？從概念到實作的逐步完整教學</h3>
       <p class="card-summary">
@@ -441,6 +410,7 @@
       </div>
     </article>
 
+    <!-- Card 4 -->
     <article class="card">
       <h3 class="card-title">Coursera 更新 2026 年 AI 學習資源：從免費課程到認證的最佳路徑整理</h3>
       <p class="card-summary">
@@ -455,27 +425,6 @@
   </section>
 
 </main>
-
-<!-- Archive -->
-<div class="archive-wrapper" id="archive">
-  <div class="archive-section">
-    <h2>📂 歷史存檔</h2>
-    <div class="archive-grid">
-      <a class="archive-card" href="2026-05-14.html">
-        <span>2026年05月14日</span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="archive-card" href="2026-05-13.html">
-        <span>2026年05月13日</span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="archive-card" href="2026-05-12.html">
-        <span>2026年05月12日</span>
-        <span class="arrow">→</span>
-      </a>
-    </div>
-  </div>
-</div>
 
 <!-- Footer -->
 <footer class="site-footer">
