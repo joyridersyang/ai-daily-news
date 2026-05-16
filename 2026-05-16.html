@@ -162,67 +162,15 @@
   .card-link.learn { color: #7c3aed; }
   .card-link.learn:hover { background: #7c3aed; color: #fff; }
 
-  /* ── History Archive ── */
-  .history-section {
-    background: #e8e8e4;
-    padding: 40px 20px;
-  }
-  .history-inner {
-    max-width: 740px;
-    margin: 0 auto;
-  }
-  .history-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .history-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
-  }
-  .history-card {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  .history-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    transform: translateY(-1px);
-    color: #2563eb;
-  }
-  .history-card .arrow { color: #aaa; font-size: 12px; }
-  .history-card:hover .arrow { color: #2563eb; }
-  .history-empty {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 24px;
-    text-align: center;
-    color: #999;
-    font-size: 14px;
-  }
-
   /* ── Footer ── */
   .site-footer {
-    background: #1a1a2e;
+    background: #e8e8e4;
     text-align: center;
     padding: 28px 20px;
     font-size: 13px;
-    color: rgba(255,255,255,0.5);
+    color: #888;
   }
-  .site-footer strong { color: rgba(255,255,255,0.8); }
+  .site-footer strong { color: #555; }
 </style>
 </head>
 <body>
@@ -240,7 +188,6 @@
   <a class="nav-btn" href="#tools">🛠️ 工具</a>
   <a class="nav-btn" href="#apply">🌍 應用</a>
   <a class="nav-btn" href="#learn">📚 教學</a>
-  <a class="nav-btn" href="#history">📂 歷史存檔</a>
 </nav>
 
 <!-- Content -->
@@ -436,31 +383,6 @@
   </section>
 
 </main>
-
-<!-- History Archive -->
-<section class="history-section" id="history">
-  <div class="history-inner">
-    <h2 class="history-title">📂 歷史存檔</h2>
-    <div class="history-grid">
-      <a class="history-card" href="2026-05-15.html">
-        <span>2026年05月15日</span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="history-card" href="2026-05-14.html">
-        <span>2026年05月14日</span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="history-card" href="2026-05-13.html">
-        <span>2026年05月13日</span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="history-card" href="2026-05-12.html">
-        <span>2026年05月12日</span>
-        <span class="arrow">→</span>
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- Footer -->
 <footer class="site-footer">
