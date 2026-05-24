@@ -106,52 +106,13 @@
         .card-source { color: #999; }
         .card-link { text-decoration: none; color: #3b82f6; font-weight: 500; }
         .card-link:hover { text-decoration: underline; }
-        .archive-section {
-            background: #e8e8e2;
-            padding: 30px 20px;
-            margin-top: 20px;
-        }
-        .archive-inner {
-            max-width: 740px;
-            margin: 0 auto;
-        }
-        .archive-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1a1a2e;
-            margin-bottom: 20px;
-            padding-left: 14px;
-            border-left: 4px solid #6b7280;
-        }
-        .archive-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 12px;
-        }
-        .archive-card {
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-            padding: 14px 16px;
-            text-decoration: none;
-            color: #1a1a2e;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: box-shadow 0.2s;
-        }
-        .archive-card:hover {
-            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-            color: #2563eb;
-        }
-        .archive-date { font-size: 14px; font-weight: 500; }
-        .archive-arrow { font-size: 14px; color: #999; }
         .site-footer {
             background: #eeeeee;
             text-align: center;
             padding: 20px;
             font-size: 13px;
             color: #888;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -166,10 +127,10 @@
         <a href="#tools" class="nav-btn">🛠️ 工具</a>
         <a href="#application" class="nav-btn">🌍 應用</a>
         <a href="#learning" class="nav-btn">📚 教學</a>
-        <a href="#archive" class="nav-btn">📂 存檔</a>
     </nav>
     <div class="content-wrapper">
 
+        <!-- 類別 1：AI 產業動態 -->
         <section id="industry" class="news-section section-industry">
             <h2 class="section-title">🏢 AI 產業動態</h2>
 
@@ -219,6 +180,7 @@
             </div>
         </section>
 
+        <!-- 類別 2：AI 工具介紹 -->
         <section id="tools" class="news-section section-tools">
             <h2 class="section-title">🛠️ AI 工具介紹</h2>
 
@@ -268,6 +230,7 @@
             </div>
         </section>
 
+        <!-- 類別 3：AI 實際應用案例 -->
         <section id="application" class="news-section section-application">
             <h2 class="section-title">🌍 AI 實際應用案例</h2>
 
@@ -317,6 +280,7 @@
             </div>
         </section>
 
+        <!-- 類別 4：AI 學習教學 -->
         <section id="learning" class="news-section section-learning">
             <h2 class="section-title">📚 AI 學習教學</h2>
 
@@ -367,63 +331,6 @@
         </section>
 
     </div>
-
-    <section id="archive" class="archive-section">
-        <div class="archive-inner">
-            <h2 class="archive-title">📂 歷史存檔</h2>
-            <div class="archive-grid">
-                <a href="2026-05-23.html" class="archive-card">
-                    <span class="archive-date">2026年05月23日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-22.html" class="archive-card">
-                    <span class="archive-date">2026年05月22日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-21.html" class="archive-card">
-                    <span class="archive-date">2026年05月21日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-20.html" class="archive-card">
-                    <span class="archive-date">2026年05月20日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-19.html" class="archive-card">
-                    <span class="archive-date">2026年05月19日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-18.html" class="archive-card">
-                    <span class="archive-date">2026年05月18日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-17.html" class="archive-card">
-                    <span class="archive-date">2026年05月17日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-16.html" class="archive-card">
-                    <span class="archive-date">2026年05月16日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-15.html" class="archive-card">
-                    <span class="archive-date">2026年05月15日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-14.html" class="archive-card">
-                    <span class="archive-date">2026年05月14日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-13.html" class="archive-card">
-                    <span class="archive-date">2026年05月13日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-                <a href="2026-05-12.html" class="archive-card">
-                    <span class="archive-date">2026年05月12日</span>
-                    <span class="archive-arrow">→</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <footer class="site-footer">
         <p>🤖 每日由 Claude AI Agent 自動整理｜共 20 則新聞｜2026年05月24日（星期日）生成</p>
     </footer>
