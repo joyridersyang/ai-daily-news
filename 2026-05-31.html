@@ -158,69 +158,10 @@
   .section-apps .card-link { color: #d97706; }
   .section-learn .card-link { color: #7c3aed; }
 
-  /* HISTORY SECTION */
-  .history-section {
-    background: #f0f0ec;
-    border-top: 2px solid #e0e0da;
-    padding: 48px 20px 56px;
-  }
-  .history-inner {
-    max-width: 740px;
-    margin: 0 auto;
-  }
-  .history-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 24px;
-    padding-left: 14px;
-    position: relative;
-  }
-  .history-title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 2px;
-    bottom: 2px;
-    width: 4px;
-    background: #94a3b8;
-    border-radius: 2px;
-  }
-  .history-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
-  }
-  .history-card {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-    padding: 14px 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  .history-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    transform: translateY(-1px);
-  }
-  .history-date {
-    font-size: 14px;
-    font-weight: 500;
-    color: #1a1a2e;
-  }
-  .history-arrow {
-    font-size: 13px;
-    color: #94a3b8;
-    font-weight: 600;
-  }
-  .history-card:hover .history-arrow { color: #2563eb; }
-
   /* FOOTER */
   .site-footer {
-    background: #e8e8e2;
-    border-top: 1px solid #d8d8d2;
+    background: #f0f0ec;
+    border-top: 1px solid #e0e0da;
     text-align: center;
     padding: 28px 20px;
     font-size: 13px;
@@ -242,7 +183,6 @@
   <button class="nav-btn" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">🛠️ 工具</button>
   <button class="nav-btn" onclick="document.getElementById('apps').scrollIntoView({behavior:'smooth'})">🌍 應用</button>
   <button class="nav-btn" onclick="document.getElementById('learn').scrollIntoView({behavior:'smooth'})">📚 教學</button>
-  <button class="nav-btn" onclick="document.getElementById('history').scrollIntoView({behavior:'smooth'})">📂 歷史</button>
 </nav>
 
 <main class="main-content">
@@ -453,95 +393,10 @@
 
 </main>
 
-<!-- ===== 歷史存檔 ===== -->
-<section class="history-section" id="history">
-  <div class="history-inner">
-    <h2 class="history-title">📂 歷史存檔</h2>
-    <div class="history-grid">
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-30.html" target="_blank">
-        <span class="history-date">2026年05月30日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-29.html" target="_blank">
-        <span class="history-date">2026年05月29日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-28.html" target="_blank">
-        <span class="history-date">2026年05月28日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-27.html" target="_blank">
-        <span class="history-date">2026年05月27日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-26.html" target="_blank">
-        <span class="history-date">2026年05月26日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-25.html" target="_blank">
-        <span class="history-date">2026年05月25日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-24.html" target="_blank">
-        <span class="history-date">2026年05月24日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-23.html" target="_blank">
-        <span class="history-date">2026年05月23日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-22.html" target="_blank">
-        <span class="history-date">2026年05月22日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-21.html" target="_blank">
-        <span class="history-date">2026年05月21日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-20.html" target="_blank">
-        <span class="history-date">2026年05月20日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-19.html" target="_blank">
-        <span class="history-date">2026年05月19日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-18.html" target="_blank">
-        <span class="history-date">2026年05月18日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-17.html" target="_blank">
-        <span class="history-date">2026年05月17日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-16.html" target="_blank">
-        <span class="history-date">2026年05月16日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-15.html" target="_blank">
-        <span class="history-date">2026年05月15日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-14.html" target="_blank">
-        <span class="history-date">2026年05月14日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-13.html" target="_blank">
-        <span class="history-date">2026年05月13日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a class="history-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-12.html" target="_blank">
-        <span class="history-date">2026年05月12日</span>
-        <span class="history-arrow">→</span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <footer class="site-footer">
   <p><strong>🤖 每日由 Claude AI Agent 自動整理</strong></p>
   <p style="margin-top:6px;">共 20 則新聞 ｜ 產業 5 則 · 工具 5 則 · 應用 5 則 · 教學 5 則</p>
-  <p style="margin-top:4px; font-size:12px;">生成時間：2026年05月31日（星期日）｜ 歷史存檔：19 期</p>
+  <p style="margin-top:4px; font-size:12px;">生成時間：2026年05月31日（星期日）</p>
 </footer>
 
 </body>
