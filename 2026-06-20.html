@@ -84,52 +84,24 @@
     .card-link { text-decoration: none; font-weight: 500; }
     .card-link:hover { text-decoration: underline; }
 
+    /* Industry – blue */
     #industry .section-title { color: #2563eb; border-left-color: #2563eb; }
     #industry .card { border-left-color: #2563eb; }
     #industry .card-link { color: #2563eb; }
-
+    /* Tools – green */
     #tools .section-title { color: #059669; border-left-color: #059669; }
     #tools .card { border-left-color: #059669; }
     #tools .card-link { color: #059669; }
-
+    /* Applications – amber */
     #applications .section-title { color: #d97706; border-left-color: #d97706; }
     #applications .card { border-left-color: #d97706; }
     #applications .card-link { color: #d97706; }
-
+    /* Learning – purple */
     #learning .section-title { color: #7c3aed; border-left-color: #7c3aed; }
     #learning .card { border-left-color: #7c3aed; }
     #learning .card-link { color: #7c3aed; }
 
-    .archive-section {
-      background: #f0f0eb;
-      border-top: 2px solid #e0e0da;
-      padding: 36px 20px 40px;
-      margin-top: 10px;
-    }
-    .archive-inner { max-width: 740px; margin: 0 auto; }
-    .archive-heading { font-size: 20px; font-weight: 700; color: #444; margin-bottom: 20px; }
-    .archive-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-      gap: 10px;
-    }
-    .archive-card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 13px 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-      text-decoration: none;
-      color: #333;
-      display: block;
-      font-size: 14px;
-      border-left: 3px solid #8b5cf6;
-      transition: box-shadow 0.2s, transform 0.15s;
-    }
-    .archive-card:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.13); transform: translateY(-1px); }
-    .archive-card .ac-date { font-weight: 700; color: #1a1a2e; }
-    .archive-card .ac-arrow { color: #8b5cf6; margin-left: 4px; }
-
-    .site-footer {
+    site-footer {
       background: #efefef;
       text-align: center;
       padding: 26px 20px;
@@ -137,11 +109,10 @@
       font-size: 13px;
       border-top: 1px solid #e0e0e0;
     }
-
+    .footer-inner { max-width: 740px; margin: 0 auto; }
     @media (max-width: 500px) {
       .site-header h1 { font-size: 28px; }
       .card-title { font-size: 15px; }
-      .archive-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -158,7 +129,6 @@
   <a class="nav-btn" href="#tools">🛠️ 工具</a>
   <a class="nav-btn" href="#applications">🌍 應用</a>
   <a class="nav-btn" href="#learning">📚 教學</a>
-  <a class="nav-btn" href="#archive">📂 存檔</a>
 </nav>
 
 <div class="container">
@@ -167,7 +137,7 @@
     ⚠️ <strong>注意：</strong>今日網路搜尋服務暫時不可用，本期內容來自 AI 知識庫（涵蓋至 2025 年中最新 AI 發展動態），供參考。後續期數將恢復即時網路新聞抓取。
   </div>
 
-  <!-- 產業 -->
+  <!-- ── 產業 ── -->
   <section class="section" id="industry">
     <div class="section-title">🏢 AI 產業動態</div>
 
@@ -217,7 +187,7 @@
     </div>
   </section>
 
-  <!-- 工具 -->
+  <!-- ── 工具 ── -->
   <section class="section" id="tools">
     <div class="section-title">🛠️ AI 工具介紹</div>
 
@@ -258,7 +228,7 @@
     </div>
   </section>
 
-  <!-- 應用 -->
+  <!-- ── 應用 ── -->
   <section class="section" id="applications">
     <div class="section-title">🌍 AI 實際應用</div>
 
@@ -299,7 +269,7 @@
     </div>
   </section>
 
-  <!-- 教學 -->
+  <!-- ── 教學 ── -->
   <section class="section" id="learning">
     <div class="section-title">📚 AI 學習教學</div>
 
@@ -340,47 +310,9 @@
     </div>
   </section>
 
-</div>
+</div><!-- /container -->
 
-<!-- 歷史存檔 -->
-<section class="archive-section" id="archive">
-  <div class="archive-inner">
-    <h2 class="archive-heading">📂 歷史存檔</h2>
-    <div class="archive-grid">
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-19.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月19日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-18.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月18日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-17.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月17日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-16.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月16日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-15.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月15日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-14.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月14日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-13.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月13日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-11.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月11日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-10.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月10日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-09.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月09日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-08.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月08日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-07.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月07日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-06.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月06日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-05.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月05日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-04.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月04日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-03.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月03日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-02.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月02日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-06-01.html" target="_blank" rel="noopener"><span class="ac-date">2026年06月01日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-31.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月31日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-30.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月30日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-29.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月29日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-28.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月28日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-27.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月27日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-26.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月26日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-25.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月25日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-24.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月24日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-23.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月23日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-22.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月22日</span><span class="ac-arrow"> →</span></a>
-      <a class="archive-card" href="https://joyridersyang.github.io/ai-daily-news/2026-05-21.html" target="_blank" rel="noopener"><span class="ac-date">2026年05月21日</span><span class="ac-arrow"> →</span></a>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
+<footer style="background:#efefef;text-align:center;padding:26px 20px;color:#999;font-size:13px;border-top:1px solid #e0e0e0;">
   <div style="max-width:740px;margin:0 auto;">
     每日由 <strong>Claude AI Agent</strong> 自動整理 &nbsp;|&nbsp; 本期共 <strong>17</strong> 則新聞 &nbsp;|&nbsp; 2026年06月20日 生成
     <br><br>
