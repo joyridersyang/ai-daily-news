@@ -1,50 +1,291 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Teams 每日簡報 - 2026-06-23</title></head>
-<body style="font-family:'Microsoft JhengHei',Calibri,sans-serif;max-width:740px;margin:0 auto;padding:20px;background:#F9FAFB">
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teams 每日簡報 - 2026-06-23</title>
+</head>
+<body style="font-family:'Microsoft JhengHei',Calibri,sans-serif;max-width:740px;margin:0 auto;padding:20px;background:#F9FAFB;color:#1F2937">
 
-  <h1 style="color:#6B46C1">📊 Teams 每日簡報</h1>
-  <p style="color:#374151;font-size:16px">2026-06-23 Tuesday ｜ ⚠️ Microsoft 365 連線異常，今日資料無法取得</p>
-
-  <!-- Error Banner -->
-  <div style="background:#FEF2F2;border:1px solid #FCA5A5;border-radius:8px;padding:20px;margin:20px 0">
-    <h2 style="color:#DC2626;margin:0 0 12px 0">🔴 系統異常通知</h2>
-    <p style="color:#7F1D1D;margin:0 0 8px 0"><strong>錯誤原因：</strong>Microsoft 365 MCP 伺服器在本次執行期間無法完成連線。</p>
-    <p style="color:#7F1D1D;margin:0 0 8px 0"><strong>影響範圍：</strong></p>
-    <ul style="color:#7F1D1D;margin:4px 0 8px 16px;padding:0">
-      <li>Teams 對話 — 無法抓取</li>
-      <li>Outlook 信件 — 無法抓取</li>
-      <li>明日行事曆 — 無法抓取</li>
-    </ul>
-    <p style="color:#7F1D1D;margin:0"><strong>建議處置：</strong>請檢查 Claude Code on the Web 的 Microsoft 365 MCP 連線設定，確認授權憑證是否過期，或手動重新觸發今日簡報。</p>
+  <div style="background:#6B46C1;color:white;padding:20px;border-radius:8px;margin-bottom:20px">
+    <h1 style="margin:0 0 8px 0;font-size:22px">📊 Teams 每日簡報</h1>
+    <p style="margin:0;font-size:15px;opacity:0.9">2026-06-23 星期二 ｜ 今日重心：明日雙場上台備戰 + Skill 審核機制首次實戰，跨部協調密集</p>
   </div>
 
-  <!-- Sections placeholder -->
-  <div style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin:12px 0">
-    <h2 style="color:#6B46C1;margin:0 0 8px 0">🎯 今日重點</h2>
-    <p style="color:#9CA3AF;margin:0">— 資料無法取得（M365 連線失敗）—</p>
+  <!-- 今日重點 -->
+  <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin-bottom:16px">
+    <h2 style="color:#6B46C1;margin:0 0 14px 0;font-size:17px">🎯 今日重點</h2>
+    <table style="width:100%;border-collapse:collapse">
+      <tr>
+        <td style="padding:8px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;width:26px;font-size:15px">1️⃣</td>
+        <td style="padding:8px 0 8px 8px;border-bottom:1px solid #F3F4F6">
+          <strong>Skill 審核機制首次實戰 — 決策「輔導調整後放行」</strong><br>
+          <span style="font-size:14px;color:#4B5563">Jeff + Alex（詹祥麟）+ 文光（郭文光）對一支 Skill 進行安全審核：① 測試腳本真實訂單號＆URL 未清除（嚴重，但可處理）② 自動寄信無人確認（治理灰色地帶，決定需輔導後放行）③ 帳密存於 local env 無疑慮。決策：「輔導調整後放行」。Jeff 同步邀請 Ray 加入資安審核小組（現有：Alex / 文光 / Jeff）。</span>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;font-size:15px">2️⃣</td>
+        <td style="padding:8px 0 8px 8px;border-bottom:1px solid #F3F4F6">
+          <strong>明日雙重上台備戰：月經管會（11:00）+ 軟硬體整合會議 II（14:00）</strong><br>
+          <span style="font-size:14px;color:#4B5563">兩場會議均有 Mandy（黃渝晴）出席，Jeff 需報告數轉/AI 進度。今日積極備稿：向 Alex 詢問審核架構頁是否納入、請心怡確認投影片更新、向文光確認 Styltrix 素材是否為週四業務版本。</span>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;font-size:15px">3️⃣</td>
+        <td style="padding:8px 0 8px 8px;border-bottom:1px solid #F3F4F6">
+          <strong>軟體架構委員會審查（今日 15:00）— Recap 三大要求出爐</strong><br>
+          <span style="font-size:14px;color:#4B5563">Alex 發出 Recap：① 現代化專案須同步納入資料治理（DLL/WinForm/Excel VBA 逐步評估 API 化）② API 需符合規範（命名、Log、Token 驗證、錯誤碼、Repo 管理）③ 新系統統一整合 MK-SSO（後端 JWT Token 驗證）。這對明日軟硬體整合會議報告有直接影響。</span>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;font-size:15px">4️⃣</td>
+        <td style="padding:8px 0 8px 8px;border-bottom:1px solid #F3F4F6">
+          <strong>AI Platform 現代化 — Kevin → John（尤承瀚）任務交接啟動</strong><br>
+          <span style="font-size:14px;color:#4B5563">Kevin Wu（吳堃源）更新 AI Platform 現代化進度至專案系統。John 現有案子全數結案，Jeff 請 Kevin 安排向 John 說明並交接任務，文光同步盤點適合給 John 的 case。明日 17:00 說明會已排定（402 會議室）。</span>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;vertical-align:top;font-size:15px">5️⃣</td>
+        <td style="padding:8px 0 8px 8px">
+          <strong>TGT 睡衣 SU26/27 NCMT 比對異常 — 調查中</strong><br>
+          <span style="font-size:14px;color:#4B5563">Maeve Chou（周襄）發現 TGT 睡衣 SU26 成改後 NCMT 被帶入 SU27 進單 NCMT，且成改力道疊加後 SU27 被墊更高。已回信給 Mandy（Jeff & Nick cc）。Jeff 與 Nick 一同調查資料轉換及運算邏輯，與 Melody 確認可先改 PJT；要求 Nick 今日找到原因或強制結案。</span>
+        </td>
+      </tr>
+    </table>
   </div>
 
-  <div style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin:12px 0">
-    <h2 style="color:#6B46C1;margin:0 0 8px 0">✅ 今日產出</h2>
-    <p style="color:#9CA3AF;margin:0">— 資料無法取得（M365 連線失敗）—</p>
+  <!-- 今日產出 -->
+  <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin-bottom:16px">
+    <h2 style="color:#059669;margin:0 0 14px 0;font-size:17px">✅ 今日產出</h2>
+    <table style="width:100%;border-collapse:collapse">
+      <tr>
+        <td style="padding:7px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;width:22px;color:#059669;font-size:15px">✔</td>
+        <td style="padding:7px 0 7px 8px;border-bottom:1px solid #F3F4F6;font-size:14px">Skill 審核決策「輔導調整後放行」，確立兩大審核標準（硬碼測試資料需清除 + 自動化寄信需加人工確認）</td>
+      </tr>
+      <tr>
+        <td style="padding:7px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;color:#059669;font-size:15px">✔</td>
+        <td style="padding:7px 0 7px 8px;border-bottom:1px solid #F3F4F6;font-size:14px">Skill 審核小組擴編：正式邀請 Ray 加入資安審核，書面邀請訊息已發出</td>
+      </tr>
+      <tr>
+        <td style="padding:7px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;color:#059669;font-size:15px">✔</td>
+        <td style="padding:7px 0 7px 8px;border-bottom:1px solid #F3F4F6;font-size:14px">AI Agent Hub 例會主持完成（11:00–12:00, 403 會議室，成員：Alex / Jerry / 心怡 / Welles / Judy）</td>
+      </tr>
+      <tr>
+        <td style="padding:7px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;color:#059669;font-size:15px">✔</td>
+        <td style="padding:7px 0 7px 8px;border-bottom:1px solid #F3F4F6;font-size:14px">軟體架構委員會議出席完成（15:00），確認 Recap 三大要求，明日報告可引用</td>
+      </tr>
+      <tr>
+        <td style="padding:7px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;color:#059669;font-size:15px">✔</td>
+        <td style="padding:7px 0 7px 8px;border-bottom:1px solid #F3F4F6;font-size:14px">Welles（蔡智宏）cleanupPeriodDays 設為 10 年確認，舊資料遺失接受現況，議題結案</td>
+      </tr>
+      <tr>
+        <td style="padding:7px 0;vertical-align:top;color:#059669;font-size:15px">✔</td>
+        <td style="padding:7px 0 7px 8px;font-size:14px">向文光索取 DKS TP 測試資料用於比對，TP 匯入問題排查中</td>
+      </tr>
+    </table>
   </div>
 
-  <div style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin:12px 0">
-    <h2 style="color:#6B46C1;margin:0 0 8px 0">📋 待辦清單</h2>
-    <p style="color:#9CA3AF;margin:0">— 資料無法取得（M365 連線失敗）—</p>
+  <!-- 待辦清單 -->
+  <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin-bottom:16px">
+    <h2 style="color:#D97706;margin:0 0 14px 0;font-size:17px">📋 待辦清單</h2>
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr style="background:#F9FAFB">
+          <th style="padding:8px 6px;text-align:left;font-size:12px;color:#6B7280;border-bottom:2px solid #E5E7EB;width:24px">急</th>
+          <th style="padding:8px 6px;text-align:left;font-size:12px;color:#6B7280;border-bottom:2px solid #E5E7EB">事項</th>
+          <th style="padding:8px 6px;text-align:left;font-size:12px;color:#6B7280;border-bottom:2px solid #E5E7EB;width:70px">對象</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:16px">🔴</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:14px"><strong>明日月經管會投影片 Final Check</strong> — 確認 Alex 審核架構頁 + 心怡數據更新（今晚前必完成）</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:13px;color:#6B7280">Alex / 心怡</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:16px">🔴</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:14px"><strong>軟硬體整合會議數轉進度投影片確認</strong> — 向文光確認 Styltrix 週四業務版（今晚前）</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:13px;color:#6B7280">文光</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:16px">🔴</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:14px"><strong>Joanne Horng（洪祖安）FA 維護</strong> — 今日下班前完成，可委請 Partricia Chou（周玉芳）或 Jason 協助</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:13px;color:#6B7280">玉芳/Jason</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:16px">🟡</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:14px"><strong>Ray 加入 Skill 審核小組確認</strong> — 今日已發邀請，等 Ray 回覆；若明日無回應需主動追</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:13px;color:#6B7280">Ray</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:16px">🟡</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:14px"><strong>TGT NCMT 比對問題結案</strong> — Nick 需今日回報（找到或找不到原因都需結案）</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:13px;color:#6B7280">Nick Yang</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:16px">🟡</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:14px"><strong>Judy Lee（李宛真）請假申請</strong> — 上週已提交，待 Jeff 確認批准</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:13px;color:#6B7280">Judy Lee</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:16px">🟡</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:14px"><strong>John（尤承瀚）7/7–7/8 家族旅遊請假</strong> — 已提出申請，待 Jeff 核准</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:13px;color:#6B7280">John You</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:16px">🟡</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:14px"><strong>超智博士團隊（紐約）進度確認</strong> — 文光接新案需時確認，若博士端無進展建議延至下週</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:13px;color:#6B7280">文光</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:16px">🟢</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:14px">Kevin 盤點現代化 case 並安排向 John 交接（Kevin 自主執行中）</td>
+          <td style="padding:8px 6px;border-bottom:1px solid #F3F4F6;font-size:13px;color:#6B7280">Kevin Wu</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 6px;font-size:16px">🟢</td>
+          <td style="padding:8px 6px;font-size:14px">明日 09:00 Trend Explorer / VOC 平台使用狀況週報提交（自辦例行任務）</td>
+          <td style="padding:8px 6px;font-size:13px;color:#6B7280">Jeff</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <div style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin:12px 0">
-    <h2 style="color:#6B46C1;margin:0 0 8px 0">🔔 待 Follow Up</h2>
-    <p style="color:#9CA3AF;margin:0">— 資料無法取得（M365 連線失敗）—</p>
+  <!-- 待 Follow Up -->
+  <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin-bottom:16px">
+    <h2 style="color:#DC2626;margin:0 0 14px 0;font-size:17px">🔔 待 Follow Up</h2>
+    <table style="width:100%;border-collapse:collapse">
+      <tr>
+        <td style="padding:8px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;width:22px;color:#DC2626">⏳</td>
+        <td style="padding:8px 0 8px 8px;border-bottom:1px solid #F3F4F6;font-size:14px">
+          <strong>Ray 是否接受 Skill 審核小組邀請</strong> — 今日已發邀請，尚無回應。若明日仍未回覆需主動追問，審核小組需到位才能 deploy 新版 Skill 框架。
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;color:#DC2626">⏳</td>
+        <td style="padding:8px 0 8px 8px;border-bottom:1px solid #F3F4F6;font-size:14px">
+          <strong>文光確認 Styltrix 投影片版本</strong> — Jeff 問「是否為週四給業務用版本」，文光回「感謝 我再安排」，具體確認尚未到位。明日 10:00 Styltrix 會議前必須收到回覆。
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;border-bottom:1px solid #F3F4F6;vertical-align:top;color:#DC2626">⏳</td>
+        <td style="padding:8px 0 8px 8px;border-bottom:1px solid #F3F4F6;font-size:14px">
+          <strong>TP 匯入問題（Rose Liao + Jasper Lian/連詠華）</strong> — Jasper 表示明日查 Flow 是否主動寫入布料資料；業務方多筆相同狀況。需追蹤 Jasper 的調查結果，確認是 Flow 問題還是資料問題。
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:8px 0;vertical-align:top;color:#DC2626">⏳</td>
+        <td style="padding:8px 0 8px 8px;font-size:14px">
+          <strong>Maeve Chou 回信 Mandy 的 SU26/27 NCMT 分析</strong> — Jeff & Nick 已被 cc，Mandy 的後續指示需留意，可能帶出系統調整或報表需求。
+        </td>
+      </tr>
+    </table>
   </div>
 
-  <div style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin:12px 0">
-    <h2 style="color:#6B46C1;margin:0 0 8px 0">📅 明日行事曆</h2>
-    <p style="color:#9CA3AF;margin:0">— 資料無法取得（M365 連線失敗）—</p>
+  <!-- 明日行事曆 -->
+  <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:16px;margin-bottom:16px">
+    <h2 style="color:#6B46C1;margin:0 0 14px 0;font-size:17px">📅 明日行事曆（2026-06-24 星期三）</h2>
+
+    <table style="width:100%;border-collapse:collapse">
+
+      <tr>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6;vertical-align:top;width:105px">
+          <span style="background:#F3F4F6;color:#374151;font-size:12px;padding:2px 6px;border-radius:4px;white-space:nowrap">09:00–10:00</span>
+        </td>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6">
+          <strong style="font-size:14px">📊 每周 Trend Explorer / VOC 平台使用狀況提交</strong><br>
+          <span style="font-size:13px;color:#6B7280">Jeff 自辦例行任務</span><br>
+          <span style="font-size:13px;color:#059669">💡 整理本週使用數據，按格式填寫報告</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6;vertical-align:top">
+          <span style="background:#F3F4F6;color:#374151;font-size:12px;padding:2px 6px;border-radius:4px;white-space:nowrap">10:00–11:00</span>
+        </td>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6">
+          <strong style="font-size:14px">🗂️ [Styltrix] 五階層與類似工段知識請教</strong><br>
+          <span style="font-size:13px;color:#6B7280">文光（郭文光）主辦 ｜ Alice Chiu（邱）、Jeff ｜ 402 會議室</span><br>
+          <span style="font-size:13px;color:#059669">💡 確認文光投影片版本；熟悉 Styltrix 五階層架構以便軟硬體整合會議補充說明</span>
+        </td>
+      </tr>
+
+      <tr style="background:#FFF7ED">
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6;vertical-align:top">
+          <span style="background:#DC2626;color:white;font-size:12px;padding:2px 6px;border-radius:4px;white-space:nowrap">11:00–12:00</span>
+        </td>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6">
+          <strong style="font-size:14px">⭐ 【2026月經管會】</strong><br>
+          <span style="font-size:13px;color:#6B7280">Ruby Hsieh 主辦 ｜ Mandy（黃渝晴）、Ben（謝孔超）、Ken（楊宗憲）、Alex、Angela（林虹君）、Lilly（鄭俐俐）等全公司管理層 ｜ 408 會議室</span><br>
+          <span style="font-size:13px;color:#DC2626">🔴 Jeff 需上台報告數轉/AI 進度。今晚前務必確認 Alex 審核架構頁 + 心怡數據更新，投影片 Final Check 完成。Mandy 親自主持，報告需精準。</span>
+        </td>
+      </tr>
+
+      <tr style="background:#FFF7ED">
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6;vertical-align:top">
+          <span style="background:#D97706;color:white;font-size:12px;padding:2px 6px;border-radius:4px;white-space:nowrap">14:00–15:00</span>
+        </td>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6">
+          <strong style="font-size:14px">⭐ 【資訊處】軟硬體整合會議 II</strong><br>
+          <span style="font-size:13px;color:#6B7280">Phyllis（陳詠君）統籌 ｜ Mandy / Ben / Jeff / Ken / Alex / Angela（林虹君）/ Novia / Jimbo / Kevin 等 ｜ 402 會議室（含 Teams 視訊）</span><br>
+          <span style="font-size:13px;color:#D97706">🟡 Jeff 負責「數轉進度」議程。可引用今日架構委員會 Recap 三大要求，說明與現代化工程的銜接計畫。</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6;vertical-align:top">
+          <span style="background:#F3F4F6;color:#374151;font-size:12px;padding:2px 6px;border-radius:4px;white-space:nowrap">15:00–16:00</span>
+        </td>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6">
+          <strong style="font-size:14px">🖥️ 【業務種子】大OS功能簡介</strong><br>
+          <span style="font-size:13px;color:#6B7280">Rosa Yi（易佳蓉）主辦 ｜ Brian（林欣煇）/ Rose + 業務同仁 ｜ 408 會議室</span><br>
+          <span style="font-size:13px;color:#059669">💡 觀察業務對大OS功能的反應與需求，留意與數轉業務的交集點。注意 Brian 與數轉的競合關係。</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6;vertical-align:top">
+          <span style="background:#F3F4F6;color:#374151;font-size:12px;padding:2px 6px;border-radius:4px;white-space:nowrap">17:00–17:30</span>
+        </td>
+        <td style="padding:10px 8px;border-bottom:1px solid #F3F4F6">
+          <strong style="font-size:14px">🤖 現代化工程 - AI Platform 說明會</strong><br>
+          <span style="font-size:13px;color:#6B7280">Kevin Wu（吳堃源）主辦 ｜ John（尤承瀚）、Jeff ｜ 403 會議室</span><br>
+          <span style="font-size:13px;color:#059669">💡 Kevin 向 John 說明 AI Platform 現代化執行方式，Jeff 見證交接。可確認 John 後續工作分配方向。</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding:10px 8px;vertical-align:top">
+          <span style="background:#F3F4F6;color:#374151;font-size:12px;padding:2px 6px;border-radius:4px;white-space:nowrap">18:00–18:30</span>
+        </td>
+        <td style="padding:10px 8px">
+          <strong style="font-size:14px">🔔 提醒要回報的事項</strong><br>
+          <span style="font-size:13px;color:#6B7280">Jeff 自訂提醒 ｜ 回顧當日須回報事項</span>
+        </td>
+      </tr>
+
+    </table>
+
+    <div style="margin-top:12px;padding:10px;background:#F9FAFB;border-radius:6px">
+      <span style="font-size:13px;color:#9CA3AF">❌ 已取消：大OS會議（Kisa Lin 取消，原 15:00）｜ ❌ 已取消：數轉產區開發會議（例行取消）</span>
+    </div>
   </div>
 
-  <hr style="border:none;border-top:1px solid #E5E7EB;margin:24px 0">
-  <p style="font-size:12px;color:#6B7280">產生時間：2026-06-23T10:04:16Z ｜ 狀態：⚠️ 異常（M365 MCP 連線失敗） ｜ <a href="index.html" style="color:#6B46C1">歷史簡報</a></p>
+  <!-- 小結 -->
+  <div style="background:#EDE9FE;border:1px solid #C4B5FD;border-radius:8px;padding:14px;margin-bottom:20px">
+    <p style="margin:0;font-size:14px;color:#5B21B6">
+      📌 <strong>今日一句話</strong>：今日是「打底日」——Skill 審核框架落定、任務交接啟動、投影片協調中；明日是「收割日」——月經管會 + 軟硬體整合雙場上台，務必今晚完成投影片 Final Check。
+    </p>
+  </div>
 
-</body></html>
+  <hr style="border:none;border-top:1px solid #E5E7EB;margin:16px 0">
+  <p style="font-size:12px;color:#6B7280;margin:0">
+    產生時間：2026-06-23T10:03 UTC ｜
+    Teams 對話：44 筆（過濾後 35 筆有效）｜
+    Outlook 信件：26 筆（1 筆相關）｜
+    明日行事曆：8 場有效（含 2 場已取消）｜
+    <a href="index.html" style="color:#6B46C1">歷史簡報</a>
+  </p>
+
+</body>
+</html>
