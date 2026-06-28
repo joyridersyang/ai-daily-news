@@ -1,554 +1,412 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 每日報 — 2026年06月22日</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background-color: #f5f5f0;
-    font-family: 'Noto Sans TC', sans-serif;
-    color: #1a1a2e;
-    line-height: 1.7;
-  }
-  a { color: inherit; text-decoration: none; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 AI 每日報 - 2026年06月28日</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #f5f5f0; font-family: 'Noto Sans TC', sans-serif; color: #1a1a2e; }
 
-  /* Header */
-  .site-header {
-    background: linear-gradient(90deg, #1a1a2e 0%, #2d3561 100%);
-    padding: 36px 24px 28px;
-    text-align: center;
-  }
-  .site-header h1 {
-    color: #ffffff;
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-  }
-  .site-header .subtitle {
-    color: rgba(255,255,255,0.65);
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 1px;
-  }
-  .header-divider {
-    height: 4px;
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-  }
+        .header {
+            background: linear-gradient(to right, #1a1a2e, #2d3561);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 { color: #ffffff; font-size: 42px; font-weight: 700; letter-spacing: 2px; }
+        .header p { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 10px; }
+        .header-divider { height: 4px; background: linear-gradient(to right, #3b82f6, #8b5cf6); }
 
-  /* Nav */
-  .nav-bar {
-    background: #ffffff;
-    border-bottom: 1px solid #e8e8e2;
-    padding: 12px 24px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .nav-btn {
-    background: #eeeeee;
-    color: #555;
-    border-radius: 20px;
-    padding: 6px 18px;
-    font-size: 13px;
-    font-weight: 500;
-    transition: background 0.2s;
-  }
-  .nav-btn:hover { background: #ddd; }
+        .nav { background: #ffffff; padding: 12px 20px; text-align: center; border-bottom: 1px solid #e5e5e5; }
+        .nav a {
+            display: inline-block;
+            background: #eeeeee;
+            color: #555555;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .nav a:hover { background: #dddddd; }
 
-  /* Main content */
-  .main-content {
-    max-width: 740px;
-    margin: 32px auto;
-    padding: 0 16px;
-  }
+        .content { max-width: 740px; margin: 0 auto; padding: 28px 16px; }
 
-  /* Section */
-  .news-section { margin-bottom: 44px; }
-  .section-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e0e0d8;
-  }
-  .section-accent {
-    width: 4px;
-    height: 24px;
-    border-radius: 2px;
-    margin-right: 12px;
-    flex-shrink: 0;
-  }
-  .section-title {
-    font-size: 18px;
-    font-weight: 700;
-  }
+        .section { margin-bottom: 44px; }
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            padding: 2px 0 14px 16px;
+            margin-bottom: 16px;
+        }
 
-  /* Cards */
-  .news-card {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07), 0 2px 12px rgba(0,0,0,0.04);
-    padding: 20px 20px 16px 20px;
-    margin-bottom: 14px;
-    border-left: 3px solid #ccc;
-    transition: box-shadow 0.2s;
-  }
-  .news-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.11); }
-  .news-card-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    line-height: 1.5;
-  }
-  .news-card-summary {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.75;
-    margin-bottom: 12px;
-  }
-  .news-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .news-source {
-    font-size: 12px;
-    color: #888;
-    font-weight: 500;
-  }
-  .news-link {
-    font-size: 12px;
-    font-weight: 600;
-    transition: opacity 0.2s;
-  }
-  .news-link:hover { opacity: 0.7; }
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+            padding: 20px;
+            margin-bottom: 14px;
+        }
+        .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; line-height: 1.5; }
+        .card p { font-size: 14px; color: #555555; line-height: 1.75; margin-bottom: 14px; }
+        .card-footer { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+        .card-source { color: #999999; }
+        .card-link { text-decoration: none; font-weight: 500; }
+        .card-link:hover { text-decoration: underline; }
 
-  /* Section colour tokens */
-  .sec-industry .section-accent { background: #2563eb; }
-  .sec-industry .section-title  { color: #2563eb; }
-  .sec-industry .news-card      { border-left-color: #2563eb; }
-  .sec-industry .news-link      { color: #2563eb; }
+        /* History Archive */
+        .archive-section {
+            background: #f0f0eb;
+            border-top: 2px solid #e0e0d8;
+            padding: 32px 16px;
+        }
+        .archive-inner { max-width: 740px; margin: 0 auto; }
+        .archive-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid #6b7280;
+        }
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .archive-card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+            padding: 14px 16px;
+            text-decoration: none;
+            color: #1a1a2e;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: box-shadow 0.2s, transform 0.1s;
+        }
+        .archive-card:hover {
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+            transform: translateY(-1px);
+        }
+        .archive-card .arrow { color: #6b7280; font-size: 13px; }
 
-  .sec-tools .section-accent { background: #059669; }
-  .sec-tools .section-title  { color: #059669; }
-  .sec-tools .news-card      { border-left-color: #059669; }
-  .sec-tools .news-link      { color: #059669; }
-
-  .sec-apply .section-accent { background: #d97706; }
-  .sec-apply .section-title  { color: #d97706; }
-  .sec-apply .news-card      { border-left-color: #d97706; }
-  .sec-apply .news-link      { color: #d97706; }
-
-  .sec-learn .section-accent { background: #7c3aed; }
-  .sec-learn .section-title  { color: #7c3aed; }
-  .sec-learn .news-card      { border-left-color: #7c3aed; }
-  .sec-learn .news-link      { color: #7c3aed; }
-
-  /* History archive */
-  .history-section {
-    background-color: #e8e8e3;
-    border-top: 2px solid #ddd;
-    padding: 40px 16px 48px;
-  }
-  .history-inner {
-    max-width: 740px;
-    margin: 0 auto;
-  }
-  .history-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .history-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-  }
-  .history-card {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-    padding: 14px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  .history-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    transform: translateY(-1px);
-  }
-  .history-date-text {
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-  }
-  .history-arrow {
-    font-size: 12px;
-    color: #8b5cf6;
-    font-weight: 700;
-  }
-
-  /* Footer */
-  .site-footer {
-    background-color: #dededb;
-    border-top: 1px solid #ccc;
-    text-align: center;
-    padding: 24px 16px;
-    color: #888;
-    font-size: 13px;
-  }
-  .site-footer strong { color: #555; }
-</style>
+        .footer {
+            background: #ebebeb;
+            text-align: center;
+            padding: 22px;
+            font-size: 13px;
+            color: #888888;
+            border-top: 1px solid #dcdcdc;
+        }
+    </style>
 </head>
 <body>
 
-<header class="site-header">
-  <h1>🤖 AI 每日報</h1>
-  <p class="subtitle">2026年06月22日 星期一 &nbsp;|&nbsp; 每日精選 AI 新聞摘要</p>
-</header>
+<div class="header">
+    <h1>🤖 AI 每日報</h1>
+    <p>2026年06月28日 星期日</p>
+</div>
 <div class="header-divider"></div>
 
-<nav class="nav-bar">
-  <span class="nav-btn">🏢 產業</span>
-  <span class="nav-btn">🛠️ 工具</span>
-  <span class="nav-btn">🌍 應用</span>
-  <span class="nav-btn">📚 教學</span>
-</nav>
+<div class="nav">
+    <a href="#industry">🏢 產業</a>
+    <a href="#tools">🛠️ 工具</a>
+    <a href="#applications">🌍 應用</a>
+    <a href="#tutorials">📚 教學</a>
+    <a href="#archive">📂 歷史</a>
+</div>
 
-<main class="main-content">
+<div class="content">
 
-  <!-- Section 1: Industry -->
-  <section class="news-section sec-industry">
-    <div class="section-header">
-      <div class="section-accent"></div>
-      <h2 class="section-title">🏢 AI 產業動態</h2>
+    <!-- ===== 類別 1：AI 產業動態 ===== -->
+    <div class="section" id="industry">
+        <div class="section-title" style="border-left: 4px solid #2563eb; color: #2563eb;">🏢 AI 產業動態</div>
+
+        <div class="card" style="border-left: 3px solid #2563eb;">
+            <h3>Google 推出 Gemini 2.5 Pro Deep Think，拿下公開模型最強寶座</h3>
+            <p>Google 正式發布 Gemini 2.5 Pro with Deep Think，支援高達 200 萬 token 的超長上下文視窗，是競爭對手的兩倍。各項基準測試顯示，這可能是目前市面上最強的公開模型。然而 Google 也同步宣布將 Gemini 3.5 Pro 的正式上線日期從六月延後至七月，早期測試者反映 token 效率和長任務執行方面仍有待改進。AI Mode 已在全球範圍內改用 Gemini 3.5 Flash 作為預設模型，並開始導入 24 小時常駐背景代理功能。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Medium / AI Insights</span>
+                <a href="https://medium.com/adi-insights-innovations-collective/ai-update-monday-june-22-2026-ad347993f9ad" class="card-link" style="color: #2563eb;">閱讀原文 →</a>
+            </div>
+        </div>
+
+        <div class="card" style="border-left: 3px solid #2563eb;">
+            <h3>OpenAI 預覽 GPT-5.6 三款新模型：Sol、Terra、Luna 各司其職</h3>
+            <p>OpenAI 宣布推出 GPT-5.6 模型家族預覽版，三款模型各有定位：Sol 專為頂級推理與長任務代理設計；Terra 提供與 GPT-5.5 相當的性能，成本卻降低 50%；Luna 則是最快、最經濟的輕量選項。目前僅對特定合作夥伴開放，計畫於數週後正式推出。同時，OpenAI 也與 Broadcom 合作發布名為「Jalapeño」的首款自研 AI 加速處理器，開啟硬體自主布局。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Broadcom / Releasebot</span>
+                <a href="https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-unveil-llm-optimized-intelligence-processor" class="card-link" style="color: #2563eb;">閱讀原文 →</a>
+            </div>
+        </div>
+
+        <div class="card" style="border-left: 3px solid #2563eb;">
+            <h3>美國政府批准 Anthropic 向百家企業與聯邦機構釋出 Mythos 5 模型</h3>
+            <p>美國川普政府批准 Anthropic 向約 100 家公司及聯邦機構發布旗下最強的 Mythos 5 模型。此前 Anthropic 曾於 6 月 12 日暫停旗下 Fable 5 和 Mythos 5 的對外存取，引發廣泛關注。此次政府核准讓 Anthropic 得以恢復部分模型的受控發布，顯示 AI 前沿模型的發布正逐漸進入政府監管框架。Anthropic 另推出 Claude Tag，讓企業團隊可以將 Claude 加入 Slack 作為正式成員。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 CNBC</span>
+                <a href="https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html" class="card-link" style="color: #2563eb;">閱讀原文 →</a>
+            </div>
+        </div>
+
+        <div class="card" style="border-left: 3px solid #2563eb;">
+            <h3>Google AI 人才大出走：頂尖研究員接連跳槽，Alphabet 股價重挫 5%</h3>
+            <p>Google 在六月爆發嚴重人才流失危機。Gemini 模型共同負責人 Noam Shazeer 跳槽至 OpenAI，AlphaFold 創始人 John Jumper 轉投 Anthropic，Gemini 核心貢獻者 Jonas Adler 與 Alexander Pritzel 也確認將跟進。Alphabet 股價隨即下跌約 5%，創下逾一年來最大單日跌幅。分析師認為此波人才流失直接動搖了市場對 Google AI 長期競爭力的信心。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 CNBC / Bloomberg</span>
+                <a href="https://www.cnbc.com/2026/06/22/alphabet-goog-stock-ai-departures.html" class="card-link" style="color: #2563eb;">閱讀原文 →</a>
+            </div>
+        </div>
+
+        <div class="card" style="border-left: 3px solid #2563eb;">
+            <h3>Meta 發布自主設計 AI 眼鏡 26 款造型，同步籌備 AI 預測市場應用</h3>
+            <p>Meta 宣布推出全新自主設計的 AI 眼鏡產品線，涵蓋 26 種顏色、鏡片與鏡框組合，深度布局穿戴式 AI 市場。與此同時，Zuckerberg 指示團隊開發名為 Arena 的獨立 AI 預測市場應用，將使用 Llama 大型語言模型自動從熱門話題生成預測題目，並由 AI 負責解析與結算市場結果。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 CNN Business / NPR</span>
+                <a href="https://www.cnn.com/2026/06/23/tech/meta-glasses-price" class="card-link" style="color: #2563eb;">閱讀原文 →</a>
+            </div>
+        </div>
     </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">Google I/O 2026：搜尋引擎迎來 25 年最大 AI 升級</h3>
-      <p class="news-card-summary">Google 在 I/O 2026 大會上宣布將 Gemini 3.5 Flash 設為全球 AI 模式的預設模型，並正式推出 AI 搜尋代理功能，讓使用者可以創建、自定義並管理多個 AI 代理，在背景 24/7 持續蒐集與推理資訊。搜尋框也迎來 25 年來最重大的視覺與功能升級，加入動態擴展和 AI 驅動的智慧建議。此外，Google 發布了 Gemini Omni 多模態模型及 SynthID 內容驗證工具，協助使用者識別 AI 生成內容。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：Google Blog</span>
-        <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+    <!-- ===== 類別 2：AI 工具介紹 ===== -->
+    <div class="section" id="tools">
+        <div class="section-title" style="border-left: 4px solid #059669; color: #059669;">🛠️ AI 工具介紹</div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">OpenAI 推出 GPT-5.5 Instant，同步更新企業用量分析功能</h3>
-      <p class="news-card-summary">OpenAI 於 6 月 21 日宣布針對企業客戶更新用量分析儀表板及消費控制功能，並推出更智慧、更個性化的 GPT-5.5 Instant 模型。同時，6 月 18 日公布的醫療 AI 應用包括提升 ChatGPT 健康智能及協助醫師診斷兒童罕見遺傳疾病。GPT-4.5 將於 6 月 27 日起正式退役，OpenAI o3 也預計於 8 月底完成世代交替。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：OpenAI</span>
-        <a href="https://openai.com/news/" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+        <div class="card" style="border-left: 3px solid #059669;">
+            <h3>Microsoft MAI-Thinking-1：首款自研推理模型，AIME 25 拿下 97% 高分</h3>
+            <p>Microsoft AI 超智能團隊於 Build 2026 大會正式發布 MAI-Thinking-1，這是 Microsoft 史上第一款自研推理模型。採用 35B 活躍參數的 MoE 混合專家架構，支援 256K token 超長上下文，在 AIME 25 數學競賽基準測試中達到 97% 的驚人成績。同系列另有 MAI-Code-1-Flash，可根據文字描述自動生成應用程式原始碼，大幅降低非技術人員開發門檻。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Microsoft AI Blog</span>
+                <a href="https://microsoft.ai/news/microsoft-build-2026-mai-keynote-transcript/" class="card-link" style="color: #059669;">閱讀原文 →</a>
+            </div>
+        </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">Microsoft Build 2026：七款自研 AI 模型登場，MAI-Thinking-1 媲美頂級競品</h3>
-      <p class="news-card-summary">微軟在 Build 2026 大會上發布七款全新自研 AI 模型，其中首款推理模型 MAI-Thinking-1 的表現已達到 Anthropic Claude Opus 4.6 的水準。此外，微軟還發布了 AI 原生搜尋堆疊 Web IQ、個人工作代理 Microsoft Scout，以及在圖像生成排行榜位居前三的 MAI-Image-2.5。硬體方面，AI 原生裝置系列 Project Solara 和下一代量子運算晶片 Majorana 2 也同步亮相。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：Microsoft Blog</span>
-        <a href="https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+        <div class="card" style="border-left: 3px solid #059669;">
+            <h3>xAI 推出 Grok Build Beta：終端機 AI 程式代理，三強鼎立正式開戰</h3>
+            <p>馬斯克旗下 xAI 正式發布 Grok Build Beta，這是一款基於 Grok 4.3 的終端機 TUI 程式設計代理工具，支援無介面 CI 腳本自動化與 Agent 客戶端協議（ACP）。Grok Build 的加入讓 AI 程式代理市場正式形成三方競爭格局，直接對陣 OpenAI Codex 和 Anthropic Claude Code。2026 年 6 月共有五款新模型入市，創下今年單月新增最高紀錄。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 LLM Stats / AI Tools Recap</span>
+                <a href="https://llm-stats.com/llm-updates" class="card-link" style="color: #059669;">閱讀原文 →</a>
+            </div>
+        </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">Anthropic 秘密提交 IPO 申請，Fable 5 模型因出口管制遭暫停</h3>
-      <p class="news-card-summary">Anthropic 於 6 月 1 日向美國 SEC 秘密提交 S-1 表格，正式啟動 IPO 程序。同月，公司也在首爾設立辦公室並與韓國 AI 生態系統建立新夥伴關係。然而，Fable 5 和 Mythos 5 模型因美國政府以「國家安全」為由發出出口管制指令而暫停服務，此事件暴露了企業依賴閉源 AI 模型的風險——存取權限可能毫無預警地被切斷。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：Anthropic</span>
-        <a href="https://www.anthropic.com/news/confidential-draft-s1-sec" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+        <div class="card" style="border-left: 3px solid #059669;">
+            <h3>OpenAI 實時音頻 API 正式 GA：即時翻譯、語音對話一次到位</h3>
+            <p>OpenAI 宣布三款實時音頻 API 模型正式從 Beta 版轉為全面可用（GA）：GPT-Realtime-2 負責即時語音對話、GPT-Realtime-Translate 主打即時跨語言翻譯、GPT-Realtime-Whisper 提供高精度語音轉文字。這批模型讓開發者可快速建構語音 AI 產品，大幅降低了以往在即時語音場景的整合複雜度與延遲問題。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 AI Tools Recap / Releasebot</span>
+                <a href="https://aitoolsrecap.com/Blog/AINewsJune2026.aspx" class="card-link" style="color: #059669;">閱讀原文 →</a>
+            </div>
+        </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">Meta 推出 AI 聊天機器人訂閱制，月費 $7.99 起</h3>
-      <p class="news-card-summary">Meta 宣布首度向消費者推出 Meta AI 聊天機器人訂閱方案，月費分 $7.99 和 $19.99 兩個等級，以因應數百億美元 AI 投資的成本壓力。Alexandr Wang 主導的團隊也在 4 月推出 Muse Spark 模型，可輕鬆整合至 Facebook、Instagram 及 Ray-Ban Meta 智慧眼鏡等 Meta 旗下產品。此外，Meta 近期還將 Ray-Ban Meta 眼鏡捐贈給全美所有盲人退伍軍人，強化 AI 輔助視覺的社會形象。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：Bloomberg</span>
-        <a href="https://www.bloomberg.com/news/articles/2026-05-27/meta-to-sell-ai-chatbot-subscriptions-in-bid-to-offset-spending" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
-  </section>
+        <div class="card" style="border-left: 3px solid #059669;">
+            <h3>GitHub Copilot 代理登陸 Visual Studio：自動偵錯、效能分析、測試全包</h3>
+            <p>微軟 Build 2026 第二天宣布 GitHub Copilot 代理正式進駐 Visual Studio，可自動執行偵錯、效能分析和單元測試工作。同步上線的 Microsoft IQ 上下文層已在 GitHub Copilot、Microsoft Foundry 和 Copilot Studio 全面可用，能將企業私有知識與世界通用知識融合，讓 AI 代理在執行企業任務時更有依據、更精準。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Microsoft Developer Blog</span>
+                <a href="https://developer.microsoft.com/blog/build-recap" class="card-link" style="color: #059669;">閱讀原文 →</a>
+            </div>
+        </div>
 
-  <!-- Section 2: Tools -->
-  <section class="news-section sec-tools">
-    <div class="section-header">
-      <div class="section-accent"></div>
-      <h2 class="section-title">🛠️ AI 工具介紹</h2>
+        <div class="card" style="border-left: 3px solid #059669;">
+            <h3>2026 最佳 AI 生產力工具榜單：Zapier、Perplexity、CraftNote 各領風騷</h3>
+            <p>2026 年最受推薦的 AI 生產力工具包含三大類型：自動化平台首選 Zapier（AI Copilot 可自動建立跨 App 工作流程，免寫程式）；研究輔助首選 Perplexity（平均引用 42 個來源，幾分鐘完成深度研究）；會議紀錄首選 CraftNote（支援 100 多種語言即時轉錄，可離線使用）。選工具的核心原則：能在數天內而非數月帶來實際價值。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Zapier / Reclaim.ai</span>
+                <a href="https://zapier.com/blog/best-ai-productivity-tools/" class="card-link" style="color: #059669;">閱讀原文 →</a>
+            </div>
+        </div>
     </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">xAI 發布 Grok Imagine Video 1.5，定價比 Sora 2 Pro 便宜 86%</h3>
-      <p class="news-card-summary">xAI 於 6 月 16 日將 Grok Imagine Video 1.5 正式推出一般可用版本，並同步上線於 API、grok.com 及 iOS/Android 應用程式。新版本在影像轉影片 Arena 排行榜上以 +52 Elo 的優異成績登頂，大幅領先前代版本。最吸引開發者的是其定價策略：720p 解析度每秒僅需 $0.14，比 Sora 2 Pro 的 $0.50 便宜約 86%，大幅降低影像 AI 的應用門檻。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：Kingy.ai</span>
-        <a href="https://kingy.ai/news/ai-launch-radar-june-8-2026/" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+    <!-- ===== 類別 3：AI 實際應用 ===== -->
+    <div class="section" id="applications">
+        <div class="section-title" style="border-left: 4px solid #d97706; color: #d97706;">🌍 AI 實際應用</div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">H Company 推出 Holo3.1 本地電腦操作 AI 模型系列</h3>
-      <p class="news-card-summary">H Company 在 Hugging Face 上發布了 Holo3.1 模型系列，包含 0.8B、4B、9B 及 35B-A3B 四種大小的變體，專為本地環境中的電腦操作代理設計。這些視覺語言模型支援網頁瀏覽、桌面操作和行動裝置環境的導覽與自動化任務，讓開發者無需仰賴雲端服務即可在本地部署高效能的電腦使用代理。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：LLM Stats</span>
-        <a href="https://llm-stats.com/llm-updates" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+        <div class="card" style="border-left: 3px solid #d97706;">
+            <h3>AI 每天幫員工省下 40-60 分鐘，75% 使用者能完成從前辦不到的任務</h3>
+            <p>Goldman Sachs 最新研究顯示，使用 ChatGPT 企業帳號的員工每天平均節省 40 至 60 分鐘，且 75% 的使用者表示現在能完成以前根本無法勝任的工作。知識工作者在電子郵件管理方面每週更節省了 3.6 小時，相當於減少 31% 的郵件處理時間。值得關注的是，雖然個人生產力提升顯著，但目前仍有 80% 的企業尚未在財務數字上看到可衡量的整體效益。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Fortune / Goldman Sachs</span>
+                <a href="https://fortune.com/2026/04/01/ai-worker-productivity-adoption-goldman-sachs-saves-60-minutes-per-day/" class="card-link" style="color: #d97706;">閱讀原文 →</a>
+            </div>
+        </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">GitHub Copilot SDK 正式發布，開發者生態系大幅擴張</h3>
-      <p class="news-card-summary">GitHub 於 6 月 2 日宣布 Copilot SDK 正式開放一般可用，同步更新 Copilot CLI，並將雲端/本地 Copilot 沙箱環境納入公開預覽。xAI 也同步推出 Grok Build Beta，這是一款基於 Grok 4.3 的終端機 TUI 程式代理，支援無頭 CI 腳本及 Agent Client Protocol，讓開發者能以更自動化的方式進行程式開發和持續整合。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：LLM Stats</span>
-        <a href="https://llm-stats.com/llm-updates" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+        <div class="card" style="border-left: 3px solid #d97706;">
+            <h3>Firstsource × AppliedAI：醫療數據管理與教育招生 AI 從試點成功走向量產</h3>
+            <p>Firstsource Solutions 與 AppliedAI 於 2026 年 6 月宣布其策略合作夥伴關係的重大里程碑。雙方已在醫療機構的資料管理流程和教育機構的入學申請審核中，成功將 AI 解決方案從試驗階段推進至生產環境，並取得可量化的成效。此案例被視為 2026 年企業 AI 從「展示概念」走向「規模化部署」的代表性成功案例之一。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Firstsource Solutions</span>
+                <a href="https://www.firstsource.com/newsroom/press-releases/firstsource-and-appliedai-report-real-world-results" class="card-link" style="color: #d97706;">閱讀原文 →</a>
+            </div>
+        </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">2026 年最值得使用的 AI 生產力工具完整盤點</h3>
-      <p class="news-card-summary">根據多位評測者的實際使用報告，2026 年最受推薦的 AI 生產力工具涵蓋多個面向：Claude 和 ChatGPT 持續領跑通用 AI 助手市場；Motion 已進化為集行事曆、專案管理和文件記錄為一體的全功能工具；Descript 讓影片剪輯如同編輯文字文件一樣直覺；Perplexity 則以平均引用 42 個來源的能力成為研究工作的利器。專家建議從兩三款工具開始，先試用免費版本，找到真正解決自己問題的工具。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：Zapier</span>
-        <a href="https://zapier.com/blog/best-ai-productivity-tools/" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
-  </section>
+        <div class="card" style="border-left: 3px solid #d97706;">
+            <h3>NVIDIA 報告：88% 企業 AI 已拉升年營收，三成企業成長超過 10%</h3>
+            <p>根據 NVIDIA 2026 年企業 AI 現況報告，88% 的受訪企業表示 AI 對年度營收有正面影響，其中 30% 報告成長超過 10%，33% 達到 5-10% 的增幅。在零售和消費品業，高達 95% 的企業表示 AI 幫助降低了年度營運成本，且其中 37% 的成本降幅超過 10%。66% 的組織在生產力和效率方面取得顯著且可衡量的提升。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 NVIDIA Blog</span>
+                <a href="https://blogs.nvidia.com/blog/state-of-ai-report-2026/" class="card-link" style="color: #d97706;">閱讀原文 →</a>
+            </div>
+        </div>
 
-  <!-- Section 3: Applications -->
-  <section class="news-section sec-apply">
-    <div class="section-header">
-      <div class="section-accent"></div>
-      <h2 class="section-title">🌍 AI 實際應用</h2>
+        <div class="card" style="border-left: 3px solid #d97706;">
+            <h3>2026 年成為自主 AI 元年：企業從單點試驗轉向全面 AI 作業系統</h3>
+            <p>分析師指出 2026 年是自主 AI 系統的歷史元年，企業正從零星 AI 試點，快速轉向跨部門可擴展的 AI 作業系統。零售、醫療、房地產、酒店和數位體驗行業是此波轉型的領頭羊。採用 AI 代理解決方案的企業平均回報超過 30% 的效率提升，AI 已從「科技部門玩具」升格為「核心商業基礎設施」。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Intellectyx / First Line Software</span>
+                <a href="https://www.intellectyx.com/ai-agent-useful-case-study-10-real-world-examples-applications/" class="card-link" style="color: #d97706;">閱讀原文 →</a>
+            </div>
+        </div>
     </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">Duolingo 導入 GitHub Copilot，300+ 工程師開發速度提升 25%</h3>
-      <p class="news-card-summary">Duolingo 將 GitHub Copilot 整合進 300 多位工程師的日常工作流程，工具會提供即時程式碼建議並自動化重複性任務。實際成效相當顯著：在陌生程式碼庫工作的工程師平均開發速度提升 25%，程式碼審查的中位數周轉時間更減少了 67%。這個案例已成為大型科技企業成功導入 AI 開發工具的代表性範本，也讓更多公司開始評估類似工具的 ROI。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：DigitalDefynd</span>
-        <a href="https://digitaldefynd.com/IQ/artificial-intelligence-case-studies/" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+    <!-- ===== 類別 4：AI 學習教學 ===== -->
+    <div class="section" id="tutorials">
+        <div class="section-title" style="border-left: 4px solid #7c3aed; color: #7c3aed;">📚 AI 學習教學</div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">PwC 2026 AI 績效研究：88% 企業確認 AI 提升年收入</h3>
-      <p class="news-card-summary">PwC 最新 AI 績效研究顯示，全球 91% 企業至少在一個領域使用 AI，其中 88% 確認 AI 增加了年收入，30% 稱增幅超過 10%；87% 則表示 AI 幫助降低了年度營運成本。然而，研究也點出不均衡的現象：AI 帶來的經濟效益有 75% 集中在 20% 的企業手中，且 80% 的企業尚未看到底線改善，員工信心度也下降了 18%。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：PwC</span>
-        <a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-performance-study.html" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+        <div class="card" style="border-left: 3px solid #7c3aed;">
+            <h3>DataCamp 2026 零基礎學 AI 完整指南：三個月打好基礎、三個月進階應用</h3>
+            <p>DataCamp 發布了 2026 年版的零基礎 AI 學習完整路徑。建議前三個月優先建立 Python 基礎、數據操作能力、提示工程技巧，以及使用 AI 編程助手協作的能力。指南特別強調，提示工程已成為 2026 年職場的基線技能；能撰寫清晰、具體的提示是快速看到 AI 價值的關鍵第一步，也是讓 AI 從「普通答覆」升級到「精準輸出」的核心差異。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 DataCamp</span>
+                <a href="https://www.datacamp.com/blog/how-to-learn-ai" class="card-link" style="color: #7c3aed;">閱讀原文 →</a>
+            </div>
+        </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">UCSF 與 SandboxAQ 合作：量子化學結合 AI 加速帕金森症藥物研發 36 倍</h3>
-      <p class="news-card-summary">加州大學舊金山分校（UCSF）與 SandboxAQ 合作，運用量子化學模擬與 AI 技術的組合，在帕金森症候選藥物的篩選速度上達到傳統方法的 36 倍。這項突破性研究展示了 AI 在高度計算密集型的製藥研發領域的巨大潛力，有望大幅縮短從分子發現到臨床試驗的時間週期，並降低研發成本。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：DigitalDefynd</span>
-        <a href="https://digitaldefynd.com/IQ/artificial-intelligence-case-studies/" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+        <div class="card" style="border-left: 3px solid #7c3aed;">
+            <h3>AI 初學者第一步：選一個工具、一個任務，從真實需求出發</h3>
+            <p>專家建議初學者不要試圖一次「精通 AI」，而是從單一工具的單一實際使用場景切入。ChatGPT 和 Claude 是寫作與文件分析的最佳入門選擇。最有效的起點包含：整理例行郵件、摘要長篇文件、輔助腦力激盪，或生成工作初稿。關鍵訣竅是學會撰寫具體的提示，因為描述方式決定了輸出品質的高低，「具體勝過模糊」是提示工程的第一原則。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Arthify.in / AI Tool Mind</span>
+                <a href="https://arthify.in/how-to-use-ai-tools-as-a-beginner/" class="card-link" style="color: #7c3aed;">閱讀原文 →</a>
+            </div>
+        </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">印度 AI 健康影響手冊：24 個醫療 AI 真實應用案例公開分享</h3>
-      <p class="news-card-summary">在 IndiaAI 影響峰會 2026 上，《AI 健康影響手冊》正式發布，匯集了來自全球不同地區的 24 個醫療 AI 真實應用案例。這些案例涵蓋疾病診斷、藥物研發、醫療影像分析和公共衛生監測等多個層面，展示 AI 如何在資源有限的環境下提升醫療系統的效率與可及性。WHO 與 Palantir 合作的即時疾病監測平台也是其中一個亮點案例。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：IndiaAI</span>
-        <a href="https://indiaai.gov.in/case-study/casebook-on-real-world-impact-of-ai-in-health" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
-  </section>
+        <div class="card" style="border-left: 3px solid #7c3aed;">
+            <h3>YouTube 熱門教學：2026 AI 新手入門影片，從零開始打造任何東西</h3>
+            <p>YouTube 上一部「AI Tutorial for Beginners 2026: How To Use AI &amp; Build ANYTHING」在 AI 學習社群引發廣泛討論，適合完全無技術背景的初學者。課程涵蓋如何利用現有 AI 工具從零打造真實產品，搭配 Amazing eLearning 平台的文字版分步驟說明大幅降低入門門檻。重點是強調「動手做」而非「理論學習」，鼓勵學習者直接從第一個實際作品開始累積信心。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 YouTube / Amazing eLearning</span>
+                <a href="https://www.youtube.com/watch?v=65CASowfnKs" class="card-link" style="color: #7c3aed;">閱讀原文 →</a>
+            </div>
+        </div>
 
-  <!-- Section 4: Learning -->
-  <section class="news-section sec-learn">
-    <div class="section-header">
-      <div class="section-accent"></div>
-      <h2 class="section-title">📚 AI 學習教學</h2>
+        <div class="card" style="border-left: 3px solid #7c3aed;">
+            <h3>Coursera 2026 AI 學習路徑全覽：免費課程到專業認證一次掌握</h3>
+            <p>Coursera 更新了 2026 年人工智能學習指南，提供從免費入門課程到專業認證的完整路徑規劃。指南建議初學者先理解 AI 的核心概念與限制，再逐步探索自然語言處理、機器學習基礎和 AI 倫理。在快速演進的 AI 時代，「學習如何學習 AI」和「理解 AI 的能力邊界」比死記具體工具操作步驟更具長遠價值。</p>
+            <div class="card-footer">
+                <span class="card-source">📰 Coursera</span>
+                <a href="https://www.coursera.org/articles/how-to-learn-artificial-intelligence" class="card-link" style="color: #7c3aed;">閱讀原文 →</a>
+            </div>
+        </div>
     </div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">DataCamp 完整指南：2026 年從零開始學 AI 的 9 個月路徑規劃</h3>
-      <p class="news-card-summary">DataCamp 發布 2026 年版「從頭學 AI」完整指南，建議採取分三階段的 9 個月學習路徑：前三個月建立 Python 程式基礎及提示工程技能，第四到六個月轉向應用 AI，學習 API 整合與 RAG 管道建設，最後三個月深入開發自主代理系統。指南強調不需要深厚的數學背景，只要循序漸進，任何人都能在一年內從零建立完整的 AI 開發能力。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：DataCamp</span>
-        <a href="https://www.datacamp.com/blog/how-to-learn-ai" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
+</div>
 
-    <article class="news-card">
-      <h3 class="news-card-title">Microsoft 發布「90 天工作效率提升」AI 應用實踐指南</h3>
-      <p class="news-card-summary">微軟在 Signal 平台發布了一份針對一般上班族設計的 AI 應用實踐指南，以「90 天內用 AI 讓工作更聰明」為主軸，提供分階段的具體行動步驟。指南建議先盤點自己的日常任務，區分哪些可以完全交給 AI 處理、哪些適合 AI 輔助、哪些則需要保留人類判斷。每個 AI 助手系統都有三個層次：快速聊天、嚴肅工作和高難度問題，選對層次能讓效益最大化。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：Microsoft Signal</span>
-        <a href="https://news.microsoft.com/signal/articles/work-smarter-in-90-days-a-real-world-guide-to-using-ai/" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
-
-    <article class="news-card">
-      <h3 class="news-card-title">初學者 5 步驟框架：現在就能開始使用 AI 的實踐指南</h3>
-      <p class="news-card-summary">Medium 上廣受好評的 AI 入門框架建議，從「列出你每週前 12 項任務」開始，將其分為三類：AI 可獨立完成的（如例行報告、資料輸入）、需要人機協作的（如策略分析輔助）、以及人類專屬的（如建立信任、道德決策）。文章強調選擇 ChatGPT、Claude 或 Gemini 其一開始練習，並將有效的提示詞存成備忘清單，讓 AI 從新奇的嘗試變成可靠的日常工作習慣。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：Medium</span>
-        <a href="https://medium.com/@savank/the-practical-guide-to-ai-in-2026-a-5-step-framework-anyone-can-use-to-get-started-today-d6ae9325cd49" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
-
-    <article class="news-card">
-      <h3 class="news-card-title">如何用 AI 管理個人財務：2026 年分步驟操作指南</h3>
-      <p class="news-card-summary">Origin 發布了一份實用的 AI 個人理財應用指南，教導讀者如何利用 AI 工具輔助日常財務管理，包括自動化預算追蹤、投資組合分析、退休計劃模擬及稅務最佳化建議。指南特別強調使用 AI 進行財務規劃時的注意事項：務必核實 AI 提供的數字和建議，必要時諮詢持牌財務顧問，並保持對個人資料安全的意識。這份指南適合完全不懂財務的初學者作為入門參考。</p>
-      <div class="news-card-footer">
-        <span class="news-source">來源：Origin</span>
-        <a href="https://useorigin.com/resources/blog/how-to-use-ai-for-personal-finance-a-step-by-step-guide-2026" target="_blank" class="news-link">閱讀原文 →</a>
-      </div>
-    </article>
-  </section>
-
-</main>
-
-<!-- History Archive -->
-<section class="history-section">
-  <div class="history-inner">
-    <h2 class="history-title">📂 歷史存檔</h2>
-    <div class="history-grid">
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-21.html" class="history-card">
-        <span class="history-date-text">2026年06月21日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-20.html" class="history-card">
-        <span class="history-date-text">2026年06月20日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-19.html" class="history-card">
-        <span class="history-date-text">2026年06月19日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-18.html" class="history-card">
-        <span class="history-date-text">2026年06月18日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-17.html" class="history-card">
-        <span class="history-date-text">2026年06月17日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-16.html" class="history-card">
-        <span class="history-date-text">2026年06月16日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-15.html" class="history-card">
-        <span class="history-date-text">2026年06月15日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-14.html" class="history-card">
-        <span class="history-date-text">2026年06月14日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-13.html" class="history-card">
-        <span class="history-date-text">2026年06月13日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-11.html" class="history-card">
-        <span class="history-date-text">2026年06月11日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-10.html" class="history-card">
-        <span class="history-date-text">2026年06月10日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-09.html" class="history-card">
-        <span class="history-date-text">2026年06月09日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-08.html" class="history-card">
-        <span class="history-date-text">2026年06月08日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-07.html" class="history-card">
-        <span class="history-date-text">2026年06月07日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-06.html" class="history-card">
-        <span class="history-date-text">2026年06月06日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-05.html" class="history-card">
-        <span class="history-date-text">2026年06月05日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-04.html" class="history-card">
-        <span class="history-date-text">2026年06月04日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-03.html" class="history-card">
-        <span class="history-date-text">2026年06月03日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-02.html" class="history-card">
-        <span class="history-date-text">2026年06月02日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-01.html" class="history-card">
-        <span class="history-date-text">2026年06月01日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-31.html" class="history-card">
-        <span class="history-date-text">2026年05月31日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-30.html" class="history-card">
-        <span class="history-date-text">2026年05月30日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-29.html" class="history-card">
-        <span class="history-date-text">2026年05月29日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-28.html" class="history-card">
-        <span class="history-date-text">2026年05月28日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-27.html" class="history-card">
-        <span class="history-date-text">2026年05月27日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-26.html" class="history-card">
-        <span class="history-date-text">2026年05月26日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-25.html" class="history-card">
-        <span class="history-date-text">2026年05月25日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-24.html" class="history-card">
-        <span class="history-date-text">2026年05月24日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-23.html" class="history-card">
-        <span class="history-date-text">2026年05月23日</span>
-        <span class="history-arrow">→</span>
-      </a>
-      <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-22.html" class="history-card">
-        <span class="history-date-text">2026年05月22日</span>
-        <span class="history-arrow">→</span>
-      </a>
+<!-- ===== 歷史存檔區塊 ===== -->
+<div class="archive-section" id="archive">
+    <div class="archive-inner">
+        <div class="archive-title">📂 歷史存檔</div>
+        <div class="archive-grid">
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-22.html" class="archive-card">
+                <span>2026年06月22日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-21.html" class="archive-card">
+                <span>2026年06月21日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-20.html" class="archive-card">
+                <span>2026年06月20日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-19.html" class="archive-card">
+                <span>2026年06月19日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-18.html" class="archive-card">
+                <span>2026年06月18日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-17.html" class="archive-card">
+                <span>2026年06月17日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-16.html" class="archive-card">
+                <span>2026年06月16日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-15.html" class="archive-card">
+                <span>2026年06月15日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-14.html" class="archive-card">
+                <span>2026年06月14日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-13.html" class="archive-card">
+                <span>2026年06月13日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-11.html" class="archive-card">
+                <span>2026年06月11日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-10.html" class="archive-card">
+                <span>2026年06月10日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-09.html" class="archive-card">
+                <span>2026年06月09日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-08.html" class="archive-card">
+                <span>2026年06月08日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-07.html" class="archive-card">
+                <span>2026年06月07日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-06.html" class="archive-card">
+                <span>2026年06月06日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-05.html" class="archive-card">
+                <span>2026年06月05日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-04.html" class="archive-card">
+                <span>2026年06月04日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-03.html" class="archive-card">
+                <span>2026年06月03日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-02.html" class="archive-card">
+                <span>2026年06月02日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-06-01.html" class="archive-card">
+                <span>2026年06月01日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-31.html" class="archive-card">
+                <span>2026年05月31日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-30.html" class="archive-card">
+                <span>2026年05月30日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-29.html" class="archive-card">
+                <span>2026年05月29日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-28.html" class="archive-card">
+                <span>2026年05月28日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-27.html" class="archive-card">
+                <span>2026年05月27日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-26.html" class="archive-card">
+                <span>2026年05月26日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-25.html" class="archive-card">
+                <span>2026年05月25日</span><span class="arrow">→</span>
+            </a>
+            <a href="https://joyridersyang.github.io/ai-daily-news/2026-05-24.html" class="archive-card">
+                <span>2026年05月24日</span><span class="arrow">→</span>
+            </a>
+        </div>
     </div>
-  </div>
-</section>
+</div>
 
-<footer class="site-footer">
-  <p>每日由 <strong>Claude AI Agent</strong> 自動整理 &nbsp;|&nbsp; 共 <strong>17 則</strong>新聞 &nbsp;|&nbsp; 2026年06月22日 星期一</p>
-  <p style="margin-top:4px; font-size:12px;">產業 5 則 &nbsp;·&nbsp; 工具 4 則 &nbsp;·&nbsp; 應用 4 則 &nbsp;·&nbsp; 教學 4 則</p>
-</footer>
+<div class="footer">
+    <p>每日由 Claude AI Agent 自動整理 ｜ 共 18 則新聞 ｜ 2026年06月28日 星期日</p>
+</div>
 
 </body>
 </html>
